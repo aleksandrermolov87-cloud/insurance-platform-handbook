@@ -227,7 +227,7 @@ function App() {
     case "systems":
     case "operations":
     case "subjects":
-      page = <Catalog kind={key} id={a} />;
+      page = <Catalog kind={key} id={a} step={r.query.get("step")} />;
       break;
     case "architecture":
     case "modules":
@@ -245,7 +245,7 @@ function App() {
       );
       break;
     case "article":
-      page = <Article id={a} />;
+      page = <Article id={a} step={r.query.get("step")} />;
       break;
     case "journey":
       page = <Journey channel={a} />;
@@ -255,7 +255,13 @@ function App() {
       break;
     case "screens":
       page = (
-        <Screens channel={a} id={b} allFrames={r.query.get("view") === "all"} />
+        <Screens
+          channel={a}
+          id={b}
+          allFrames={r.query.get("view") === "all"}
+          from={r.query.get("from")}
+          step={r.query.get("step")}
+        />
       );
       break;
     case "product":

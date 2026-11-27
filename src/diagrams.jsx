@@ -10,11 +10,26 @@ import { Graph as LayoutGraph, layout } from "@dagrejs/dagre";
 import chapters from "./data/article-diagrams.json";
 import fullGraph from "./data/full-graph.json";
 import "./diagrams.css";
+import {
+  stepsByArticle,
+  commonStates,
+  channelStateGroup,
+} from "./screen-evidence";
 
 const nodesById = new Map(fullGraph.nodes.map((n) => [n.id, n]));
 const chaptersById = new Map(chapters.map((d) => [d.articleId, d]));
 
 function measureDiagram(nodes, edges, available, sizer) {
+  const measuring = document.createElement("canvas").getContext("2d");
+  measuring.font = "600 14px Arial";
+  const words = nodes.map(
+    (n) =>
+      Math.ceil(
+        Math.max(
+          ...n.label.split(/\s+/).map((w) => measuring.measureText(w).width),
+        ),
+      ) + 26,
+  );
   function measure(direction, boxWidth) {
     const graph = new LayoutGraph({ multigraph: true });
     graph.setGraph({
@@ -25,18 +40,23 @@ function measureDiagram(nodes, edges, available, sizer) {
       marginy: 15,
     });
     graph.setDefaultEdgeLabel(() => ({}));
-    const boxes = nodes.map((node) => {
+    const boxes = nodes.map((node, i) => {
       const box = document.createElement("span");
       box.className = "diagram-node";
-      box.style.width = boxWidth + "px";
+      box.style.width =
+        (words[i] > boxWidth && words[i] <= boxWidth + 14
+          ? words[i]
+          : boxWidth) + "px";
       box.textContent = node.label;
       return box;
     });
     sizer.replaceChildren(...boxes);
     nodes.forEach((node, i) =>
       graph.setNode(node.id, {
-        width: boxWidth,
-        height: Math.max(50, boxes[i].offsetHeight + 4),
+        width: boxes[i].offsetWidth,
+        height:
+          Math.max(50, boxes[i].offsetHeight + 4) +
+          (node.targets?.length ? 32 : 0),
       }),
     );
     edges.forEach((e, i) => graph.setEdge(e.from, e.to, {}, String(i)));
@@ -71,7 +91,86 @@ function measureDiagram(nodes, edges, available, sizer) {
   return wide;
 }
 
-function Diagram({
+function rememberStep(event, target) {
+  if (
+    !event.metaKey &&
+    !event.ctrlKey &&
+    !event.shiftKey &&
+    !event.altKey &&
+    event.button === 0
+  ) {
+    history.replaceState(history.state, "", target.returnHref);
+  }
+}
+function EvidenceLink({ target }) {
+  return (
+    <a
+      className="step-screen-link"
+      href={target.href}
+      onClick={(e) => rememberStep(e, target)}
+    >
+      <div className="step-image">
+        <img src={target.src} alt="" loading="lazy" />
+      </div>
+      <div>
+        <small>
+          {target.channel} · {target.section}
+        </small>
+        <strong>{target.title}</strong>
+        <p>{target.why}</p>
+      </div>
+    </a>
+  );
+}
+function StepEvidence({ step }) {
+  const [query, setQuery] = useState("");
+  const first = step.targets.filter(
+    (t, i, all) => all.findIndex((other) => other.channel === t.channel) === i,
+  );
+  const variants = step.targets.filter((t) => !first.includes(t));
+  const terms = query.toLocaleLowerCase("ru").trim().split(/\s+/);
+  const shown = variants.filter((t) =>
+    terms.every((term) =>
+      [t.title, t.why, t.channel, t.section, t.node]
+        .join(" ")
+        .toLocaleLowerCase("ru")
+        .includes(term),
+    ),
+  );
+  return (
+    <section className="step-evidence">
+      <h3>Экраны шага «{step.label}»</h3>
+      <div className="evidence-grid">
+        {first.map((t) => (
+          <EvidenceLink key={t.id} target={t} />
+        ))}
+      </div>
+      {variants.length > 0 && (
+        <details className="evidence-states">
+          <summary>Другие состояния и варианты · {variants.length}</summary>
+          {variants.length > 5 && (
+            <label>
+              Поиск по состояниям и каналам
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Название, канал или ID фрейма"
+              />
+            </label>
+          )}
+          <div className="evidence-grid">
+            {shown.map((t) => (
+              <EvidenceLink key={t.id} target={t} />
+            ))}
+          </div>
+          {!shown.length && <p>Совпадений нет.</p>}
+        </details>
+      )}
+    </section>
+  );
+}
+export function Diagram({
   title,
   summary,
   nodes,
@@ -79,6 +178,7 @@ function Diagram({
   source,
   initial,
   emphasis,
+  scrollToInitial,
   footer,
 }) {
   const [picked, setPicked] = useState(initial || nodes[0].id);
@@ -110,6 +210,16 @@ function Diagram({
     observer.observe(el);
     return () => observer.disconnect();
   }, [nodes, edges]);
+  const revealed = useRef(false);
+  useEffect(() => {
+    if (!scrollToInitial || revealed.current || !drawing.nodes.length) return;
+    const node = drawing.nodes.find((n) => n.id === initial);
+    if (!node) return;
+    revealed.current = true;
+    const el = wrapper.current;
+    el.scrollLeft = Math.max(0, node.x - el.clientWidth / 2);
+    el.closest("figure")?.scrollIntoView({ block: "start" });
+  }, [drawing, initial, scrollToInitial]);
   const names = new Map(nodes.map((n) => [n.id, n.label]));
   const connected = edges.filter(
     (e) => e.from === selected.id || e.to === selected.id,
@@ -118,7 +228,13 @@ function Diagram({
     <figure className="knowledge-figure" aria-labelledby={captionId}>
       <figcaption className="figure-heading">
         <h2 id={captionId}>{title}</h2>
-        <p>{summary}</p>
+        {summary && <p>{summary}</p>}
+        {nodes.some((n) => n.targets?.length) && (
+          <p className="diagram-instruction">
+            Нажмите метку канала на схеме, чтобы открыть экран. Выберите сам
+            шаг, чтобы увидеть его описание и варианты.
+          </p>
+        )}
       </figcaption>
       <div className="diagram-sizer" ref={sizer} aria-hidden="true" />
       {drawing.width > available + 4 && (
@@ -164,30 +280,77 @@ function Diagram({
               />
             ))}
           </svg>
-          {drawing.nodes.map((n) => (
-            <button
-              key={n.id}
-              type="button"
-              className={"diagram-node" + (n.id === emphasis ? " is-hub" : "")}
-              style={{
-                width: n.width,
-                height: n.height,
-                left: n.x - n.width / 2,
-                top: n.y - n.height / 2,
-              }}
-              aria-pressed={selected.id === n.id}
-              onClick={() => setPicked(n.id)}
-            >
-              {n.label}
-            </button>
-          ))}
+          {drawing.nodes.map((n) => {
+            const bounds = {
+              width: n.width,
+              height: n.height,
+              left: n.x - n.width / 2,
+              top: n.y - n.height / 2,
+            };
+            const shortcuts = (n.targets || []).filter(
+              (t, i, all) =>
+                all.findIndex((other) => other.channel === t.channel) === i,
+            );
+            const button = (
+              <button
+                key={n.id}
+                data-node={n.id}
+                type="button"
+                className={
+                  "diagram-node" + (n.id === emphasis ? " is-hub" : "")
+                }
+                style={shortcuts.length ? undefined : bounds}
+                aria-pressed={selected.id === n.id}
+                onClick={() => setPicked(n.id)}
+              >
+                {n.label}
+              </button>
+            );
+            if (!shortcuts.length) return button;
+            return (
+              <div
+                key={n.id}
+                className={
+                  "diagram-linked-node" +
+                  (selected.id === n.id ? " selected" : "")
+                }
+                style={bounds}
+              >
+                {button}
+                <div className="diagram-jumps">
+                  {shortcuts.map((t) => (
+                    <a
+                      key={t.channel}
+                      href={t.href}
+                      onClick={(e) => rememberStep(e, t)}
+                      aria-label={t.channel + " · " + t.title + " · " + n.label}
+                    >
+                      {t.channel}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="diagram-detail" aria-live="polite">
         <div>
+          {selected.lane && (
+            <small className="role-label">{selected.lane}</small>
+          )}
           <h3>{selected.label}</h3>
           {selected.note && <p>{selected.note}</p>}
           {selected.href && <a href={selected.href}>Открыть карточку</a>}
+          {!!selected.participants?.length && (
+            <div className="process-records">
+              {selected.participants.map((n) => (
+                <a key={n.id} href={"#/" + n.catalog + "/" + n.index}>
+                  {n.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
         {!!connected.length && (
           <ul>
@@ -202,6 +365,9 @@ function Diagram({
           </ul>
         )}
       </div>
+      {!!selected.targets?.length && (
+        <StepEvidence key={selected.id} step={selected} />
+      )}
       {footer}
       {source && (
         <a
@@ -266,10 +432,51 @@ function CompositionChart() {
     </figure>
   );
 }
-export function ArticleDiagram({ id }) {
+function CommonChannelStates({ reveal }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (reveal) {
+      ref.current.open = true;
+      ref.current.scrollIntoView({ block: "start" });
+    }
+  }, [reveal]);
+  return (
+    <details className="step-evidence common-channel-states" ref={ref}>
+      <summary>
+        {channelStateGroup.title} · {commonStates.length}
+      </summary>
+      <p>
+        Оба сообщения относятся к оформлению ДМС в интернет-банке. На экране
+        видны причина прерывания и действие для повтора.
+      </p>
+      <div className="evidence-grid">
+        {commonStates.map((t) => (
+          <EvidenceLink key={t.id} target={t} />
+        ))}
+      </div>
+    </details>
+  );
+}
+export function ArticleDiagram({ id, step }) {
   if (id === "m7") return <CompositionChart />;
   const d = chaptersById.get(id);
-  return d ? <Diagram {...d} /> : null;
+  if (!d) return null;
+  const nodes = stepsByArticle.get(id);
+  const initial = nodes.find((n) => n.id === step)?.id;
+  return (
+    <Diagram
+      key={id + "-" + (initial || "")}
+      {...d}
+      nodes={nodes}
+      initial={initial}
+      scrollToInitial={Boolean(initial)}
+      footer={
+        id === channelStateGroup.article && (
+          <CommonChannelStates reveal={step === channelStateGroup.id} />
+        )
+      }
+    />
+  );
 }
 
 function neighboursFor(node) {

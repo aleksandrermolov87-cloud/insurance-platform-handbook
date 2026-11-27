@@ -18,6 +18,11 @@ import {
   matches,
   searchable,
 } from "./shared";
+import {
+  CatalogVisuals,
+  CatalogGroups,
+  RecordVisuals,
+} from "./catalog-visuals";
 import { ArticleDiagram, Neighbourhood } from "./diagrams";
 export const library = [
   ...space.map((a, i) => ({
@@ -107,7 +112,7 @@ function RelatedScreens({ id }) {
     </section>
   );
 }
-export function Article({ id }) {
+export function Article({ id, step }) {
   const a = library.find((a) => a.id === id);
   if (!a) return <Empty />;
   const path =
@@ -120,7 +125,7 @@ export function Article({ id }) {
       <Title context={a.area} title={a.title}>
         {a.summary}
       </Title>
-      <ArticleDiagram id={id} />
+      <ArticleDiagram id={id} step={step} />
       <div className="article-body">
         {a.sections.map((s, i) => (
           <section key={i}>
@@ -136,16 +141,39 @@ export function Article({ id }) {
     </>
   );
 }
-export function Catalog({ kind, id }) {
+export function Catalog({ kind, id, step }) {
   const system = kind !== "operations";
   const original = kind === "subjects" ? subjects : system ? systems : ops;
   const [q, sq] = useState(""),
     [type, st] = useState("");
+  const [pickedGroup, setPickedGroup] = useState(null);
+  const jump = (target) =>
+    requestAnimationFrame(() => {
+      const section = document.getElementById(target);
+      section?.focus({ preventScroll: true });
+      section?.scrollIntoView({ block: "start" });
+    });
+  const filterGroup = (title, ids) => {
+    sq("");
+    st("");
+    setPickedGroup({
+      title,
+      indices: new Set(
+        fullGraph.nodes.filter((n) => ids.includes(n.id)).map((n) => n.index),
+      ),
+    });
+    jump("catalog-records");
+  };
   const typeKey = system ? "kind" : "status";
   const types = [...new Set(original.map((o) => o[typeKey]))];
   const rows = original
     .map((o, i) => ({ ...o, id: i }))
-    .filter((o) => (!type || o[typeKey] === type) && matches(searchable(o), q));
+    .filter(
+      (o) =>
+        (!pickedGroup || pickedGroup.indices.has(o.id)) &&
+        (!type || o[typeKey] === type) &&
+        matches(searchable(o), q),
+    );
   const record = id !== undefined ? original[Number(id)] : null;
   const node =
     record &&
@@ -165,6 +193,7 @@ export function Catalog({ kind, id }) {
         <Title context={record[typeKey]} title={record.title}>
           {record.summary}
         </Title>
+        {node && <RecordVisuals node={node} step={step} />}
         {node && <Neighbourhood node={node} />}
         <dl className="facts">
           <div>
@@ -203,39 +232,58 @@ export function Catalog({ kind, id }) {
             ? "Назначение систем и компонентов из архитектурного описания и пяти реестров интеграций. Записи источников сохранены раздельно."
             : "110 строк архитектуры и 110 строк из пяти реестров интеграций. Одинаковое действие может встречаться в обоих источниках. Статусы относятся к документам на дату среза."}
       </Title>
-      <Filter
-        label="Поиск по названию, назначению или источнику"
-        value={q}
-        change={sq}
-      />
-      <div className="filters">
-        <label>
-          {system ? "Тип объекта" : "Статус"}
-          <select value={type} onChange={(e) => st(e.target.value)}>
-            <option value="">Все варианты</option>
-            {types.map((t) => (
-              <option key={t}>{t}</option>
-            ))}
-          </select>
-        </label>
-        <p className="count">Записей · {rows.length}</p>
-      </div>
-      <div className="catalog">
-        <div className="catalog-head">
-          <span>{system ? "Объект / назначение" : "Операция / источник"}</span>
-          <span>{system ? "Тип" : "Статус"}</span>
+      <CatalogVisuals kind={kind} filter={filterGroup} jump={jump} />
+      <section id="catalog-records" tabIndex="-1">
+        <h2>Список записей</h2>
+        <CatalogGroups
+          kind={kind}
+          filter={filterGroup}
+          selected={pickedGroup?.title}
+        />
+        {pickedGroup && (
+          <div className="active-catalog-filter">
+            Тема · {pickedGroup.title}{" "}
+            <button type="button" onClick={() => setPickedGroup(null)}>
+              Сбросить тему
+            </button>
+          </div>
+        )}
+        <Filter
+          label="Поиск по названию, назначению или источнику"
+          value={q}
+          change={sq}
+        />
+        <div className="filters">
+          <label>
+            {system ? "Тип объекта" : "Статус"}
+            <select value={type} onChange={(e) => st(e.target.value)}>
+              <option value="">Все варианты</option>
+              {types.map((t) => (
+                <option key={t}>{t}</option>
+              ))}
+            </select>
+          </label>
+          <p className="count">Записей · {rows.length}</p>
         </div>
-        {rows.map((o) => (
-          <a key={o.id} href={"#/" + kind + "/" + o.id}>
-            <div>
-              <b>{o.title}</b>
-              <p>{o.summary || [o.source, o.location].join(" · ")}</p>
-            </div>
-            <small>{o[typeKey]}</small>
-          </a>
-        ))}
-      </div>
-      {!rows.length && <Empty />}
+        <div className="catalog">
+          <div className="catalog-head">
+            <span>
+              {system ? "Объект / назначение" : "Операция / источник"}
+            </span>
+            <span>{system ? "Тип" : "Статус"}</span>
+          </div>
+          {rows.map((o) => (
+            <a key={o.id} href={"#/" + kind + "/" + o.id}>
+              <div>
+                <b>{o.title}</b>
+                <p>{o.summary || [o.source, o.location].join(" · ")}</p>
+              </div>
+              <small>{o[typeKey]}</small>
+            </a>
+          ))}
+        </div>
+        {!rows.length && <Empty />}
+      </section>
     </>
   );
 }

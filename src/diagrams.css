@@ -235,3 +235,186 @@
   height: auto;
   border-width: 2px;
 }
+.diagram-linked-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aeb0b6;
+  border-radius: 11px;
+  background: white;
+  box-shadow: 0 2px 4px #1919190b;
+}
+.diagram-linked-node.selected {
+  border-color: #a42923;
+  background: #a42923;
+}
+.diagram-linked-node .diagram-node {
+  position: static;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  border: 0;
+  border-radius: 10px 10px 0 0;
+  background: transparent;
+  box-shadow: none;
+}
+.diagram-linked-node.selected .diagram-node {
+  color: white;
+}
+.diagram-jumps {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4px;
+  padding: 0 4px 4px;
+  height: 31px;
+}
+.diagram-jumps a {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  max-width: 65px;
+  font-size: 0.81rem;
+  font-weight: bold;
+  line-height: 1;
+  border: 1px solid #d6c6c5;
+  background: #fff2f0;
+  color: #91251f;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.diagram-jumps a:hover {
+  background: #ffe3de;
+  text-decoration: underline;
+}
+.step-evidence {
+  padding: 16px 24px;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+.step-evidence .evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+.step-evidence a {
+  display: grid;
+  grid-template-columns: minmax(52px, 27%) 1fr;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  align-items: start;
+  max-width: 520px;
+}
+.step-evidence a:hover {
+  border-color: #b44037;
+}
+.step-image {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 74px;
+  background: #f2f2f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.step-evidence small,
+.screen-steps small {
+  display: block;
+  color: var(--mute);
+  font-size: 0.8rem;
+}
+.step-evidence strong {
+  display: block;
+  line-height: 1.28;
+  margin: 3px 0;
+  font-size: 0.96rem;
+}
+.step-evidence p {
+  color: #505157;
+  font-size: 0.88rem;
+  line-height: 1.38;
+}
+.step-return {
+  margin-right: 1.3rem;
+}
+.screen-steps {
+  margin: 24px 0;
+}
+.screen-steps h2 {
+  font-size: 1.45rem;
+}
+.screen-steps ul {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+.screen-steps li a {
+  display: block;
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+.screen-steps a:hover {
+  border-color: #af332b;
+}
+@media (max-width: 650px) {
+  .step-evidence {
+    padding: 14px 15px;
+  }
+}
+
+.knowledge-figure {
+  scroll-margin-top: 82px;
+}
+.evidence-states {
+  margin-top: 12px;
+}
+.evidence-states summary {
+  cursor: pointer;
+  color: #922c25;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+.evidence-states label {
+  display: grid;
+  gap: 4px;
+  max-width: 28rem;
+  font-size: 0.86rem;
+  color: var(--mute);
+  margin-top: 10px;
+}
+.evidence-states input {
+  padding: 8px 10px;
+  border: 1px solid #b7b7bd;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.figure-heading .diagram-instruction {
+  font-size: 0.875rem;
+  margin-top: 8px;
+  color: #76403a;
+}
+
+.common-channel-states {
+  scroll-margin-top: 82px;
+}
+.common-channel-states summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+.common-channel-states > p {
+  font-size: 0.92rem;
+  margin-top: 8px;
+  color: var(--mute);
+}

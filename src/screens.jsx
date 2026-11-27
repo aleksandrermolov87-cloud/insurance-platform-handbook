@@ -11,6 +11,8 @@ import {
   matches,
   searchable,
 } from "./shared";
+import { stepsForScreen, stepHref } from "./screen-evidence";
+const curatedById = new Map(screens.map((s) => [s.id, s]));
 export const channelName = { sfa: "SFA", nib: "НИБ" };
 const channelInfo = {
   sfa: {
@@ -58,7 +60,13 @@ function Zoom({ screen, close }) {
     </dialog>
   );
 }
-export function Screens({ channel = "sfa", id, allFrames = false }) {
+export function Screens({
+  channel = "sfa",
+  id,
+  allFrames = false,
+  from,
+  step,
+}) {
   const [q, sq] = useState(""),
     [stage, ss] = useState(""),
     [zoom, sz] = useState(false);
@@ -76,13 +84,15 @@ export function Screens({ channel = "sfa", id, allFrames = false }) {
     selected ||
     (variant && {
       ...variant,
-      stage: variant.section,
-      caption: variant.reason,
+      stage: variant.stage || variant.section,
+      caption: variant.caption || variant.reason,
       nodeId: variant.node,
       width: variant.imageWidth || variant.width,
       height: variant.imageHeight || variant.height,
     });
   if (item) {
+    const steps = stepsForScreen(item.id);
+    const origin = steps.find((s) => s.article === from && s.id === step);
     const full = allFrames || Boolean(variant);
     const sequence = full
       ? frameIndex.filter((f) => f.channel === channel)
@@ -96,6 +106,13 @@ export function Screens({ channel = "sfa", id, allFrames = false }) {
       (full ? "?view=all" : "");
     return (
       <>
+        {origin && (
+          <a className="backlink step-return" href={stepHref(origin)}>
+            {origin.channelLevel
+              ? "К общим состояниям НИБ"
+              : "К шагу «" + origin.title + "»"}
+          </a>
+        )}
         <a
           className="backlink"
           href={(full ? "#/frames/" : "#/screens/") + channel}
@@ -132,6 +149,21 @@ export function Screens({ channel = "sfa", id, allFrames = false }) {
             <ul>
               {item.details.map((d) => (
                 <li key={d}>{d}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {steps.length > 0 && (
+          <div className="screen-steps">
+            <h2>Где используется экран</h2>
+            <ul>
+              {steps.map((s) => (
+                <li key={s.article + s.id}>
+                  <a href={stepHref(s)}>
+                    {s.title}
+                    <small>{s.diagram}</small>
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
@@ -257,7 +289,12 @@ export function FrameIndex({ channel, initial }) {
   const all = frameIndex.filter((f) => f.channel === channel);
   const groups = [...new Set(all.map((f) => f.section))];
   const shown = all.filter(
-    (f) => (!group || f.section === group) && matches(searchable(f), query),
+    (f) =>
+      (!group || f.section === group) &&
+      matches(
+        searchable(f) + " " + searchable(curatedById.get(f.id)?.caption || ""),
+        query,
+      ),
   );
   return (
     <>
@@ -301,6 +338,9 @@ export function FrameIndex({ channel, initial }) {
               </div>
               <small>{f.section}</small>
               <h3>{f.title}</h3>
+              <p className="frame-caption">
+                {f.caption || curatedById.get(f.id)?.caption}
+              </p>
             </a>
             <span className="frame-origin">{f.node}</span>
           </div>
