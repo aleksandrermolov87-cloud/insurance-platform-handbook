@@ -265,10 +265,16 @@ function App() {
       );
       break;
     case "product":
-      page = <Protection />;
+      page = (
+        <Protection
+          key={r.query.toString()}
+          step={r.query.get("step")}
+          channel={r.query.get("channel")}
+        />
+      );
       break;
     case "requirements":
-      page = <Requirements id={a} />;
+      page = <Requirements id={a} query={r.query} />;
       break;
     case "sources":
       page = <SourceGuide />;

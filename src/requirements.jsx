@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import pages from "./data/requirements.json";
 import {
   Action,
@@ -9,6 +9,8 @@ import {
   searchable,
   proto,
 } from "./shared";
+import { ProductJourney } from "./product-journey";
+import { productLink, screens, validChannel } from "./product-journey-model";
 function crosslinks(text) {
   return text.split(/(стр\.\s*\d+(?:[–-]\d+)?)/g).map((part, i) => {
     const m = part.match(/^стр\.\s*(\d+)/);
@@ -21,7 +23,7 @@ function crosslinks(text) {
     );
   });
 }
-export function Protection() {
+export function Protection({ step, channel }) {
   return (
     <>
       <Title context="Продукт" title="Комплексная защита бизнеса">
@@ -40,6 +42,7 @@ export function Protection() {
           Скачать требования
         </Action>
       </div>
+      <ProductJourney initialStep={step} initialChannel={channel} />
       <div className="product-summary">
         <div>
           <span className="eyebrow">Пример из требований</span>
@@ -125,12 +128,144 @@ export function Protection() {
     </>
   );
 }
-export function Requirements({ id }) {
+const updateClauses = [
+  [
+    "Подсказки адреса",
+    "Пользователь вводит адрес одной строкой и выбирает предложение. Прототип сохраняет выбранные части адреса. При редактировании строки прежний выбор сбрасывается.",
+  ],
+  [
+    "Отказ для имущества",
+    "Отказ по выбранному адресу блокирует оформление имущественной защиты. Можно исправить адрес или вернуться к составу защиты.",
+  ],
+  [
+    "Отказ для пакета с ДМС",
+    "Можно исправить адрес либо оставить уже выбранное ДМС. Во втором случае прототип убирает имущество и ответственность, сохраняет сведения о сотрудниках и пересчитывает цену.",
+  ],
+  [
+    "Отказ для ответственности с ДМС",
+    "Если имущество выключено, адрес ответственности проверяется на шаге данных. При отказе можно выбрать другой адрес, изменить состав или продолжить только с ДМС.",
+  ],
+  [
+    "Исправление отказанного адреса",
+    "Редактирование снимает прежний выбор. После выбора подходящей подсказки прототип заново определяет результат проверки и разрешает продолжить с выбранными покрытиями.",
+  ],
+  [
+    "Сохранение ДМС",
+    "При переходе на ДМС прототип снимает имущественные покрытия и ответственность. Список сотрудников сохраняется, стоимость пересчитывается, адрес исключается из состава полиса ДМС.",
+  ],
+];
+function RequirementReturn({ query }) {
+  const screen = screens.get(query.get("from"));
+  return (
+    screen && (
+      <a
+        className="backlink requirement-return"
+        href={productLink(screen.id, validChannel(query.get("channel")))}
+      >
+        К схеме · {screen.title}
+      </a>
+    )
+  );
+}
+export function Requirements({ id, query }) {
   const [q, sq] = useState("");
+  const highlight = useRef(null);
+  const number = (key) => {
+    const value = query.get(key);
+    return value !== null && /^\d+$/.test(value) ? Number(value) : null;
+  };
+  const block = number("block"),
+    row = number("row");
+  const marker = (b, r = null) =>
+    b === block && r === row
+      ? { ref: highlight, "aria-current": "location", tabIndex: -1 }
+      : {};
+  useEffect(() => {
+    const el = highlight.current;
+    if (el) {
+      el.focus({ preventScroll: true });
+      el.scrollIntoView({ block: "center" });
+    }
+  }, [id, block, row, query]);
+  if (id === "demo-rules")
+    return (
+      <>
+        <RequirementReturn query={query} />
+        <a className="backlink" href="#/product">
+          К продукту
+        </a>
+        <Title context="Особенности демонстратора" title="Проверки в прототипе">
+          Эти условия воспроизводятся в демонстрации. Параметры для
+          промышленного продукта требуют отдельного решения.
+        </Title>
+        <article className="update-clauses">
+          <section {...marker(0)}>
+            <h2>Повторная запись сотрудника</h2>
+            <p>
+              Прототип сравнивает ФИО и дату рождения с другими записями списка.
+              При совпадении он показывает ошибку и предлагает исправить анкету.
+            </p>
+          </section>
+          <section {...marker(1)}>
+            <h2>Исчерпаны попытки ввода кода</h2>
+            <p>
+              После трёх неверных попыток демонстрационное поле блокируется.
+              Можно запросить новый код и повторить подтверждение.
+            </p>
+          </section>
+        </article>
+        <p>
+          <a
+            className="product-update-source"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/aleksandrermolov87-cloud/biz-protection-prototype/blob/281fc3d0bdb7d91c07d015ec5f1617120d6358f5/index.html"
+          >
+            Исходная версия демонстратора
+          </a>
+        </p>
+      </>
+    );
+  if (id === "address-update")
+    return (
+      <>
+        <RequirementReturn query={query} />
+        <a className="backlink" href="#/product">
+          К продукту
+        </a>
+        <Title
+          context="Изменение прототипа · 26 ноября 2026"
+          title="Проверка адреса и действия при отказе"
+        >
+          После выпуска требований v1.5 в прототип добавили выбор адреса из
+          подсказок и сценарии восстановления. Результат проверки адреса
+          моделируется.
+        </Title>
+        <article className="update-clauses">
+          {updateClauses.map(([title, text], i) => (
+            <section key={title} {...marker(i)}>
+              <h2>{title}</h2>
+              <p>{text}</p>
+            </section>
+          ))}
+        </article>
+        <p>
+          <a
+            className="product-update-source"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/aleksandrermolov87-cloud/biz-protection-prototype/commit/281fc3d0bdb7d91c07d015ec5f1617120d6358f5"
+          >
+            Изменение прототипа от 26 ноября
+          </a>
+        </p>
+      </>
+    );
   const doc = pages.find((p) => String(p.page) === id);
   if (doc)
     return (
       <>
+        <RequirementReturn query={query} />
         <a href="#/requirements" className="backlink">
           Все требования
         </a>
@@ -141,11 +276,11 @@ export function Requirements({ id }) {
         <article className="doc-body">
           {doc.blocks.map((b, i) =>
             b.type === "table" ? (
-              <div className="table-wrap" key={i}>
+              <div className="table-wrap" key={i} {...marker(i)}>
                 <table>
                   <tbody>
                     {b.rows.map((r, j) => (
-                      <tr key={j}>
+                      <tr key={j} {...marker(i, j)}>
                         {r.map((v, k) =>
                           j === 0 ? (
                             <th key={k}>{crosslinks(v)}</th>
@@ -159,15 +294,17 @@ export function Requirements({ id }) {
                 </table>
               </div>
             ) : b.type === "link" ? (
-              <p key={i}>
+              <p key={i} {...marker(i)}>
                 <a href={b.url} target="_blank" rel="noreferrer">
                   {b.text}
                 </a>
               </p>
             ) : b.type === "heading" ? (
-              <h2 key={i}>{b.text}</h2>
+              <h2 key={i} {...marker(i)}>
+                {b.text}
+              </h2>
             ) : (
-              <p className={b.type} key={i}>
+              <p className={b.type} key={i} {...marker(i)}>
                 {crosslinks(b.text)}
               </p>
             ),
