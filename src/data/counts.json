@@ -1,0 +1,115 @@
+{
+  "sourceNodes": 389,
+  "sourceEdges": 901,
+  "presentationNodes": 42,
+  "presentationEdges": 65,
+  "method": "Каждая связь отнесена к области по исходной странице архитектурного описания или теме реестра, где она зафиксирована. Темы показывают распределение доказательств, поэтому связи между участниками из разных областей учитываются один раз. В опорной модели тип роли обозначает участника документированной операции. Стрелка такой роли сама по себе не устанавливает направление движения данных.",
+  "relations": [
+    {
+      "title": "Роль участника в операции",
+      "count": 440
+    },
+    {
+      "title": "Ссылка в источнике",
+      "count": 352
+    },
+    {
+      "title": "Принадлежность компонента",
+      "count": 72
+    },
+    {
+      "title": "Хранение данных",
+      "count": 37
+    }
+  ],
+  "areas": [
+    {
+      "area": "Вход, выбор продукта и заполнение заявки",
+      "total": 250,
+      "roles": 112,
+      "references": 123,
+      "contains": 7,
+      "storage": 8,
+      "architecture": 95,
+      "registers": 155
+    },
+    {
+      "area": "Подготовка документов",
+      "total": 76,
+      "roles": 48,
+      "references": 28,
+      "contains": 0,
+      "storage": 0,
+      "architecture": 76,
+      "registers": 0
+    },
+    {
+      "area": "Просмотр и подписание",
+      "total": 227,
+      "roles": 110,
+      "references": 82,
+      "contains": 23,
+      "storage": 12,
+      "architecture": 60,
+      "registers": 167
+    },
+    {
+      "area": "Оплата премии",
+      "total": 116,
+      "roles": 54,
+      "references": 43,
+      "contains": 16,
+      "storage": 3,
+      "architecture": 41,
+      "registers": 75
+    },
+    {
+      "area": "Финализация договора",
+      "total": 32,
+      "roles": 24,
+      "references": 8,
+      "contains": 0,
+      "storage": 0,
+      "architecture": 32,
+      "registers": 0
+    },
+    {
+      "area": "Общие функции канала",
+      "total": 178,
+      "roles": 84,
+      "references": 60,
+      "contains": 21,
+      "storage": 13,
+      "architecture": 48,
+      "registers": 130
+    },
+    {
+      "area": "Сверки со страховщиком",
+      "total": 22,
+      "roles": 8,
+      "references": 8,
+      "contains": 5,
+      "storage": 1,
+      "architecture": 0,
+      "registers": 22
+    }
+  ],
+  "fullMap": {
+    "nodes": 389,
+    "edges": 901,
+    "direct": 417,
+    "generalized": 484,
+    "uniquePairs": 757,
+    "isolated": 1,
+    "componentSizes": [
+      388,
+      1
+    ],
+    "generalizedByRelation": {
+      "calls": 293,
+      "references": 115,
+      "contains": 39,
+      "stored_in": 37
+    }
+  }
+}

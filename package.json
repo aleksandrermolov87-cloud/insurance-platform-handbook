@@ -1,0 +1,21 @@
+{
+  "name": "insurance-platform-handbook",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build --base=./ --outDir docs",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@alfalab/core-components": "50.43.2",
+    "@alfalab/icons-glyph": "2.296.0",
+    "@alfalab/icons-logotype": "2.38.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "sfa": {
+    "name": "Страхование",
+    "approved": "✅ ЧЕК ПРОЙДЕН",
+    "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=5703-176458",
+    "markerUrl": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=419-31038",
+    "marker": "419:31038",
+    "boundary": "226:464945",
+    "detail": {
+      "node": "8840:42156",
+      "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-42156",
+      "text": "Виджет Design Check на странице показывает «Проверено!». Четыре секции с самостоятельной пометкой «Не входит в дизайн-чек!!!» исключены."
+    }
+  },
+  "nib": {
+    "name": "Витрина и оформление ДМС [27.10 - 11.11]",
+    "approved": "✅ ДИЗАЙН-ЧЕК ПРОЙДЕН",
+    "url": "https://www.figma.com/design/zOdLGjEZCwhyWE5iPYLUv0/-W--Альфа-Страхование?node-id=5204-128",
+    "markerUrl": "https://www.figma.com/design/zOdLGjEZCwhyWE5iPYLUv0/-W--Альфа-Страхование?node-id=2852-11698",
+    "marker": "2852:11698",
+    "boundary": "2559:8555",
+    "detail": {
+      "node": "8482:134627",
+      "url": "https://www.figma.com/design/zOdLGjEZCwhyWE5iPYLUv0/-W--Альфа-Страхование?node-id=8482-134627",
+      "text": "Карточка Check info охватывает весь путь от витрины до выбора счёта и подписания, включая тексты ошибок и состояний."
+    }
+  }
+}
