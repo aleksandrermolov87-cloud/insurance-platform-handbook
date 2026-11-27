@@ -12,7 +12,7 @@ import {
 } from "./product-journey-model";
 import "./product-journey.css";
 
-function ScreenLinks({ id, channel, onOpen, detailed = false }) {
+function ScreenLinks({ id, channel, onOpen, detailed = false, onMap = false }) {
   const screen = screens.get(id),
     primary = primaryFor(screen, channel);
   return (
@@ -28,7 +28,7 @@ function ScreenLinks({ id, channel, onOpen, detailed = false }) {
         Экран <span aria-hidden="true">↗</span>
       </a>
       <a
-        href={requirementLink(primary, id, channel)}
+        href={requirementLink(primary, id, channel, onMap)}
         title={primary.label}
         aria-label={"Требования · " + screen.title}
         onClick={() => onOpen(id)}
@@ -45,69 +45,246 @@ function ScreenLinks({ id, channel, onOpen, detailed = false }) {
     </div>
   );
 }
+const decisions = {
+  config: {
+    id: "address",
+    title: "Адрес отклонён",
+    note: "Адрес имущества проверяют при расчёте. Если выбрана ответственность с ДМС без имущества, проверка проходит на шаге 3.",
+    paths: [
+      {
+        id: "address-corrected",
+        title: "Исправить адрес",
+        text: "Выбрать другой адрес из подсказок. Если он подходит, продолжить с теми же покрытиями.",
+      },
+      {
+        id: "address-dms-only",
+        title: "Оставить только ДМС",
+        text: "Если ДМС уже выбрано, список сотрудников сохранится. Проверить новую цену на шаге 2.",
+      },
+      {
+        id: "address-refused-property",
+        title: "Вернуться к выбору страховки",
+        text: "Без ДМС кнопка «К выбору страховки» возвращает на шаг 1.",
+      },
+    ],
+  },
+  data: {
+    id: "skip",
+    title: "В пакете нет ДМС",
+    paths: [
+      {
+        id: "checkout-no-dms",
+        title: "Сразу к проверке полиса",
+        text: "После выбора счёта клиент переходит с шага 3 на шаг 5. Список сотрудников нужен только для ДМС.",
+      },
+    ],
+  },
+  checkout: {
+    id: "paper",
+    title: "Подпись на бумаге",
+    channel: "sfa",
+    paths: [
+      {
+        id: "paper",
+        title: "Выбрать «На бумаге»",
+        text: "На шаге 5 менеджер выбирает способ подписания и нажимает «Подготовить согласие для подписи».",
+      },
+      {
+        id: "paper-consent",
+        title: "Подтвердить подписание",
+        text: "После подтверждения бумажной подписи оформление переходит к оплате на шаге 7.",
+      },
+    ],
+  },
+};
+
+function Decision({ decision, channel, select }) {
+  const branchChannel = decision.channel || channel;
+  return (
+    <section
+      className={"map-decision decision-" + decision.id}
+      data-decision={decision.id}
+      aria-labelledby={"decision-" + decision.id}
+    >
+      <div className="decision-heading">
+        <h3 id={"decision-" + decision.id}>{decision.title}</h3>
+        {decision.channel && (
+          <span className="decision-channel">Только в SFA</span>
+        )}
+      </div>
+      {decision.note && <p className="decision-note">{decision.note}</p>}
+      <ol
+        className={
+          "decision-paths" + (decision.id === "paper" ? " sequential" : "")
+        }
+      >
+        {decision.paths.map((path) => (
+          <li key={path.id} data-map-screen={path.id} tabIndex={-1}>
+            <div className="decision-copy">
+              <h4>{path.title}</h4>
+              <p>{path.text}</p>
+            </div>
+            <ScreenLinks
+              id={path.id}
+              channel={branchChannel}
+              onMap
+              onOpen={(id) => select(id, branchChannel, true)}
+            />
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
 function useConnections(container, channel) {
   const [lines, setLines] = useState([]);
   useLayoutEffect(() => {
-    const el = container.current;
+    const board = container.current;
     const update = () => {
-      const origin = el.getBoundingClientRect();
-      const bounds = [...el.querySelectorAll(".product-stop")].map((node) => {
+      const origin = board.getBoundingClientRect();
+      const bounds = (node) => {
         const r = node.getBoundingClientRect();
+        // Measure from the SVG's own coordinate origin inside the board border.
+        const left = r.left - origin.left - board.clientLeft,
+          top = r.top - origin.top - board.clientTop;
         return {
-          left: r.left - origin.left,
-          right: r.right - origin.left,
-          top: r.top - origin.top,
-          bottom: r.bottom - origin.top,
-          x: r.left - origin.left + r.width / 2,
-          y: r.top - origin.top + r.height / 2,
+          left,
+          top,
+          right: left + r.width,
+          bottom: top + r.height,
+          x: left + r.width / 2,
+          y: top + r.height / 2,
         };
-      });
-      const links = bounds.slice(1).map((b, i) => {
-        const a = bounds[i];
-        if (Math.abs(a.y - b.y) < 2)
-          return a.x < b.x
-            ? [
-                [a.right, a.y],
-                [b.left - 3, b.y],
-              ]
-            : [
-                [a.left, a.y],
-                [b.right + 3, b.y],
-              ];
-        return [
-          [a.x, a.bottom],
-          [b.x, b.top - 3],
-        ];
-      });
-      const a = bounds[2],
-        b = bounds[4];
-      if (Math.abs(a.x - b.x) < 2) {
-        const gap = Math.min(origin.width - 4, a.right + 13);
-        links.push([
-          [a.right, a.y],
-          [gap, a.y],
-          [gap, b.y],
-          [b.right + 3, b.y],
-        ]);
-      } else {
-        const half = (a.bottom + b.top) / 2;
-        links.push([
-          [a.x - 18, a.bottom],
-          [a.x - 18, half],
-          [b.x, half],
-          [b.x, b.top - 3],
-        ]);
+      };
+      const boxes = [...board.querySelectorAll("[data-stage]")].map(bounds);
+      const compact =
+        getComputedStyle(board).getPropertyValue("--stacked").trim() === "1";
+      const paths = [];
+      function add(id, points, branch = false) {
+        paths.push({ id, points, branch });
       }
-      setLines(links);
+      boxes.slice(1).forEach((b, i) => {
+        const a = boxes[i];
+        if (compact && decisions[stages[i].id]) {
+          const rail = a.left - 9;
+          add(stages[i].id, [
+            [a.left, a.y],
+            [rail, a.y],
+            [rail, b.y],
+            [b.left - 2, b.y],
+          ]);
+        } else if (Math.abs(a.y - b.y) < 2) {
+          add(stages[i].id, [
+            [a.right, a.y],
+            [b.left - 2, b.y],
+          ]);
+        } else {
+          add(stages[i].id, [
+            [a.x, a.bottom],
+            [b.x, b.top - 2],
+          ]);
+        }
+      });
+      const address = bounds(board.querySelector('[data-decision="address"]'));
+      const skip = bounds(board.querySelector('[data-decision="skip"]'));
+      const paper = bounds(board.querySelector('[data-decision="paper"]'));
+      function branchIn(id, a, b) {
+        if (compact) {
+          add(
+            id,
+            [
+              [b.x, a.bottom],
+              [b.x, b.top - 2],
+            ],
+            true,
+          );
+        } else {
+          const ty = Math.max(b.top + 18, Math.min(a.y, b.bottom - 18));
+          const middle = (a.right + b.left) / 2;
+          add(
+            id,
+            [
+              [a.right, a.y],
+              [middle, a.y],
+              [middle, ty],
+              [b.left - 2, ty],
+            ],
+            true,
+          );
+        }
+      }
+      function branchOut(id, a, b) {
+        if (compact) {
+          const rail = board.clientWidth - 7;
+          add(
+            id,
+            [
+              [a.right, a.y],
+              [rail, a.y],
+              [rail, b.y],
+              [b.right + 2, b.y],
+            ],
+            true,
+          );
+        } else {
+          const lane = a.left - (a.left - b.right) * 0.3;
+          const sy = a.bottom - 14,
+            ty = b.top + 12;
+          add(
+            id,
+            [
+              [a.left, sy],
+              [lane, sy],
+              [lane, ty],
+              [b.right + 2, ty],
+            ],
+            true,
+          );
+        }
+      }
+      branchIn("config-address", boxes[1], address);
+      // Liability without property collects the address on the data step.
+      const data = boxes[2];
+      if (compact) {
+        add(
+          "data-address",
+          [
+            [address.x, data.top],
+            [address.x, address.bottom + 2],
+          ],
+          true,
+        );
+      } else {
+        const y = data.top - 9,
+          x = address.left + 18;
+        add(
+          "data-address",
+          [
+            [data.right - 16, data.top],
+            [data.right - 16, y],
+            [x, y],
+            [x, address.bottom + 2],
+          ],
+          true,
+        );
+      }
+      branchIn("data-skip", boxes[2], skip);
+      branchOut("skip-checkout", skip, boxes[4]);
+      branchIn("checkout-paper", boxes[4], paper);
+      branchOut("paper-payment", paper, boxes[6]);
+      setLines(paths);
     };
     const obs = new ResizeObserver(update);
-    obs.observe(el);
-    for (const n of el.querySelectorAll(".product-stop")) obs.observe(n);
+    obs.observe(board);
+    for (const n of board.querySelectorAll("[data-stage],[data-decision]"))
+      obs.observe(n);
     update();
     return () => obs.disconnect();
   }, [container, channel]);
   return lines;
 }
+
 function Branches({ stage, channel, selected, onOpen }) {
   const options = [stage.id, ...stage.variants].filter((id) =>
     forChannel(id, channel),
@@ -165,7 +342,7 @@ function Branches({ stage, channel, selected, onOpen }) {
   );
 }
 
-export function ProductJourney({ initialStep, initialChannel }) {
+export function ProductJourney({ initialStep, initialChannel, onMap }) {
   const [selection, setSelection] = useState(() =>
     readSelection(initialStep, initialChannel),
   );
@@ -176,9 +353,13 @@ export function ProductJourney({ initialStep, initialChannel }) {
     details = useRef(null);
   const marker = "journey-line-" + useId().replace(/[^a-zA-Z0-9_-]/g, "");
   const lines = useConnections(board, channel);
-  function select(nextId, nextChannel = channel) {
+  function select(nextId, nextChannel = channel, map = false) {
     setSelection({ id: nextId, channel: nextChannel });
-    history.replaceState(history.state, "", productLink(nextId, nextChannel));
+    history.replaceState(
+      history.state,
+      "",
+      productLink(nextId, nextChannel, map),
+    );
   }
   function showStage(stage) {
     select(stage.id);
@@ -190,12 +371,19 @@ export function ProductJourney({ initialStep, initialChannel }) {
   }
   useLayoutEffect(() => {
     if (!initialStep) return;
+    const mapTarget =
+      onMap &&
+      [...board.current.querySelectorAll("[data-map-screen]")].find(
+        (node) => node.dataset.mapScreen === initialStep,
+      );
     const target =
-      stageFor.get(initialStep)?.id === initialStep
+      mapTarget ||
+      (stageFor.get(initialStep)?.id === initialStep
         ? board.current?.querySelector('[data-stage="' + initialStep + '"]')
-        : document.getElementById("case-" + initialStep);
+        : document.getElementById("case-" + initialStep));
+    if (mapTarget) mapTarget.focus({ preventScroll: true });
     target?.scrollIntoView({ block: "start" });
-  }, [initialStep]);
+  }, [initialStep, onMap]);
   const selectedGroups = all ? stages : [active];
   return (
     <figure className="product-journey" aria-labelledby="product-journey-title">
@@ -203,8 +391,8 @@ export function ProductJourney({ initialStep, initialChannel }) {
         <div>
           <h2 id="product-journey-title">Путь оформления</h2>
           <p>
-            Откройте экран и требования прямо на схеме. Нажмите название шага,
-            чтобы увидеть его варианты.
+            Сплошные стрелки показывают основной путь, пунктирные — развилки.
+            Выберите канал, чтобы открыть его экраны и требования.
           </p>
         </div>
         <div
@@ -247,57 +435,58 @@ export function ProductJourney({ initialStep, initialChannel }) {
               />
             </marker>
           </defs>
-          {lines.map((points, i) => (
+          {lines.map(({ id, points, branch }) => (
             <polyline
-              key={i}
-              className={i === 8 ? "without-dms" : ""}
+              key={id}
+              data-edge={id}
+              className={branch ? "branch-line" : ""}
               points={points.map((p) => p.join(",")).join(" ")}
               markerEnd={"url(#" + marker + ")"}
             />
           ))}
         </svg>
         {stages.map((stage, i) => {
-          const row = Math.floor(i / 3),
-            col = row % 2 === 0 ? i % 3 : 2 - (i % 3);
+          const decision = decisions[stage.id];
           return (
-            <div
-              className={
-                "product-stop" + (active.id === stage.id ? " active" : "")
-              }
-              key={stage.id}
-              data-stage={stage.id}
-              style={{ "--column": col + 1, "--row": row + 1 }}
-            >
-              <button
-                type="button"
-                className="select-stop"
-                aria-pressed={active.id === stage.id}
-                aria-controls="journey-state-panel"
-                onClick={() => showStage(stage)}
+            <React.Fragment key={stage.id}>
+              <div
+                className={
+                  "product-stop" + (active.id === stage.id ? " active" : "")
+                }
+                data-stage={stage.id}
+                style={{ gridArea: stage.id }}
               >
-                <span className="stop-number">{i + 1}</span>
-                <span>{stage.title}</span>
-              </button>
-              <p>
-                {channel === "nib" && stage.id === "code"
-                  ? "Клиент подтверждает согласие кодом."
-                  : channel === "nib" && stage.id === "done"
+                <button
+                  type="button"
+                  className="select-stop"
+                  aria-pressed={active.id === stage.id}
+                  aria-controls="journey-state-panel"
+                  onClick={() => showStage(stage)}
+                >
+                  <span className="stop-number">{i + 1}</span>
+                  <span>{stage.title}</span>
+                </button>
+                <p>
+                  {channel === "nib" && stage.id === "done"
                     ? "Дата начала защиты и документ клиента."
                     : stage.note}
-              </p>
-              <ScreenLinks
-                id={stage.id}
-                channel={channel}
-                onOpen={(next) => select(next)}
-              />
-            </div>
+                </p>
+                <ScreenLinks
+                  id={stage.id}
+                  channel={channel}
+                  onOpen={(next) => select(next)}
+                />
+              </div>
+              {decision && (
+                <Decision
+                  decision={decision}
+                  channel={channel}
+                  select={select}
+                />
+              )}
+            </React.Fragment>
           );
         })}
-      </div>
-      <div className="skip-dms">
-        <i aria-hidden="true" />
-        Список сотрудников заполняют на экране данных. Без ДМС переходят сразу к
-        проверке полиса.
       </div>
       <section
         id="journey-state-panel"

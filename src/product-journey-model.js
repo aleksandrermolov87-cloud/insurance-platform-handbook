@@ -72,6 +72,7 @@ export const stages = [
     title: "Проверка полиса",
     note: "Состав, стоимость и документы.",
     variants: [
+      "checkout-no-dms",
       "policy-preview",
       "consent",
       "email-invalid",
@@ -81,8 +82,8 @@ export const stages = [
   },
   {
     id: "code",
-    title: "Подпись согласия",
-    note: "Код клиента или бумажная подпись в SFA.",
+    title: "Подпись кодом",
+    note: "Клиент подтверждает согласие кодом.",
     variants: [
       "code-help",
       "code-wrong",
@@ -135,8 +136,10 @@ export function readSelection(id, channel) {
       : screen.channels[0],
   };
 }
-export function productLink(id, channel) {
-  return "#/product?" + new URLSearchParams({ step: id, channel });
+export function productLink(id, channel, onMap = false) {
+  const params = new URLSearchParams({ step: id, channel });
+  if (onMap) params.set("view", "map");
+  return "#/product?" + params;
 }
 export function prototypeLink(id, channel) {
   const u = new URL(proto);
@@ -147,8 +150,9 @@ export function prototypeLink(id, channel) {
 export function primaryFor(screen, channel) {
   return screen.primaryByChannel?.[channel] || screen.primary;
 }
-export function requirementLink(ref, id, channel) {
+export function requirementLink(ref, id, channel, onMap = false) {
   const params = new URLSearchParams({ from: id, channel });
+  if (onMap) params.set("view", "map");
   if (ref.block != null) params.set("block", ref.block);
   if (ref.row != null) params.set("row", ref.row);
   return "#/requirements/" + ref.page + "?" + params;

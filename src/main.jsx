@@ -269,6 +269,7 @@ function App() {
         <Protection
           key={r.query.toString()}
           step={r.query.get("step")}
+          onMap={r.query.get("view") === "map"}
           channel={r.query.get("channel")}
         />
       );

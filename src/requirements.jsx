@@ -23,7 +23,7 @@ function crosslinks(text) {
     );
   });
 }
-export function Protection({ step, channel }) {
+export function Protection({ step, channel, onMap }) {
   return (
     <>
       <Title context="Продукт" title="Комплексная защита бизнеса">
@@ -42,7 +42,11 @@ export function Protection({ step, channel }) {
           Скачать требования
         </Action>
       </div>
-      <ProductJourney initialStep={step} initialChannel={channel} />
+      <ProductJourney
+        initialStep={step}
+        initialChannel={channel}
+        onMap={onMap}
+      />
       <div className="product-summary">
         <div>
           <span className="eyebrow">Пример из требований</span>
@@ -160,7 +164,11 @@ function RequirementReturn({ query }) {
     screen && (
       <a
         className="backlink requirement-return"
-        href={productLink(screen.id, validChannel(query.get("channel")))}
+        href={productLink(
+          screen.id,
+          validChannel(query.get("channel")),
+          query.get("view") === "map",
+        )}
       >
         К схеме · {screen.title}
       </a>
