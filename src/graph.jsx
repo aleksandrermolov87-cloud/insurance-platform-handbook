@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import graph from "./data/graph.json";
 import { Action, Title, spaceUrl } from "./shared";
 import fullGraph from "./data/full-graph.json";
@@ -15,6 +15,12 @@ const colors = [
   "#5a5985",
   "#566226",
 ];
+const relationKinds = {
+  calls: "Роль участника в операции",
+  references: "Ссылка в источнике",
+  contains: "Принадлежность компонента",
+  stored_in: "Учёт и хранение",
+};
 function prepare(data) {
   const { nodes, edges } = data;
   const groups = [...new Set(nodes.map((n) => n.group))];
@@ -133,7 +139,15 @@ function draw(canvas, angles, zoom, selected, group, data) {
 }
 export function Graph({ mode, initialNode }) {
   const data = mode === "full" && full.nodes.length ? full : simple;
-  const { nodes, edges, groups } = data;
+  const [relation, setRelation] = useState("");
+  const displayed = useMemo(
+    () =>
+      relation
+        ? { ...data, edges: data.edges.filter((e) => e.relation === relation) }
+        : data,
+    [data, relation],
+  );
+  const { nodes, edges, groups } = displayed;
   const canvas = useRef(null),
     camera = useRef([0.05, -0.16]),
     pointer = useRef(null),
@@ -160,13 +174,13 @@ export function Graph({ mode, initialNode }) {
   useEffect(() => {
     const el = canvas.current;
     const render = () => {
-      hit.current = draw(el, camera.current, zoom, selected, group, data);
+      hit.current = draw(el, camera.current, zoom, selected, group, displayed);
     };
     const obs = new ResizeObserver(render);
     obs.observe(el.parentElement);
     render();
     return () => obs.disconnect();
-  }, [zoom, selected, group, angleVersion]);
+  }, [zoom, selected, group, angleVersion, displayed]);
   function down(e) {
     e.currentTarget.setPointerCapture(e.pointerId);
     pointer.current = {
@@ -218,7 +232,7 @@ export function Graph({ mode, initialNode }) {
       </div>
       <p className="muted">
         {data === full
-          ? "Все 389 записей и 901 связь. Для 417 связей сохранена исходная предметная роль. Ещё 484 связи укрупнены до документа или функциональной области и помечены «обобщено»."
+          ? `Все ${counts.fullMap.nodes} записей и ${counts.fullMap.edges} связь исходной модели. У каждой стрелки сохранены оба узла, направление и тип отношения. Названия соответствуют карточкам справочника.`
           : "Краткая карта бизнес-процесса. Подпись выбранной связи объясняет действие между участниками."}
       </p>
       <div className="graph-filters">
@@ -248,6 +262,22 @@ export function Graph({ mode, initialNode }) {
             ))}
           </select>
         </label>
+        {data === full && (
+          <label>
+            Тип связи
+            <select
+              value={relation}
+              onChange={(e) => setRelation(e.target.value)}
+            >
+              <option value="">Все связи · {data.edges.length}</option>
+              {Object.entries(relationKinds).map(([id, title]) => (
+                <option key={id} value={id}>
+                  {title} · {data.edges.filter((e) => e.relation === id).length}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
       </div>
       <div className="graph-box">
         <div className="graph-canvas">
@@ -306,6 +336,11 @@ export function Graph({ mode, initialNode }) {
           >
             Карточка и источник записи
           </a>
+        )}
+        {data === full && (
+          <p className="count">
+            Связей узла с учётом фильтра · {related.length}
+          </p>
         )}
         <ul>
           {related.map((e, i) => {

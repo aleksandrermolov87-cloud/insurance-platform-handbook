@@ -1249,47 +1249,60 @@ footer a {
 .related .screen-preview {
   height: 150px;
 }
-.frame-index > div {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--line);
-  padding: 14px 0;
-}
-.frame-index h3 {
-  margin: 4px 0;
-}
-.frame-index small,
-.frame-index p {
-  color: #5d5e66;
-  font-size: 0.88rem;
-}
-.frame-index > div > div:last-child {
+
+.frame-index {
   display: grid;
-  gap: 5px;
-  text-align: right;
-  min-width: 145px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 215px), 1fr));
+  gap: 22px 16px;
+  margin-top: 18px;
 }
-.frame-index a {
-  color: #9e241c;
+.frame-index > div {
+  min-width: 0;
+}
+.frame-tile {
+  display: block;
+}
+.frame-thumbnail {
+  height: 155px;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 7px;
+  background: #f3f3f5;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.frame-thumbnail img {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: top center;
+}
+.frame-tile:hover .frame-thumbnail {
+  border-color: #a12a23;
+}
+.frame-tile:hover h3 {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
-.frame-index h3 {
+.frame-tile small,
+.frame-origin {
+  display: block;
+  font-size: 0.78rem;
+  color: #62626a;
+  margin-top: 7px;
+}
+.frame-tile h3 {
+  font-size: 1.01rem;
+  line-height: 1.25;
+  margin-top: 4px;
   overflow-wrap: anywhere;
 }
-@media (max-width: 600px) {
-  .frame-index > div {
-    display: block;
-  }
-  .frame-index > div > div:last-child {
-    text-align: left;
-    margin-top: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
+.frame-origin {
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
 }
 .journey-nav {
   display: flex;

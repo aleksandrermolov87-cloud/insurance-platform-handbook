@@ -14,8 +14,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9317-45816.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 538
   },
   {
     "id": "sfa-9317-45521",
@@ -32,8 +32,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9317-45521.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-9282-35328",
@@ -50,8 +50,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35328.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 620
   },
   {
     "id": "sfa-9282-35383",
@@ -68,8 +68,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35383.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 644
   },
   {
     "id": "sfa-10004-209265",
@@ -86,8 +86,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-10004-209265.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 584
   },
   {
     "id": "sfa-9282-35401",
@@ -104,8 +104,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35401.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 620
   },
   {
     "id": "sfa-9282-36157",
@@ -122,8 +122,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-36157.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 270
   },
   {
     "id": "sfa-9746-46280",
@@ -140,8 +140,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9746-46280.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 270
   },
   {
     "id": "sfa-9746-46357",
@@ -158,8 +158,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9746-46357.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 278
   },
   {
     "id": "sfa-9282-36286",
@@ -167,14 +167,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=9282-36286",
     "section": "MWP",
     "sourceName": "[D] CorporatePage",
-    "title": "Ошибка загрузки документа в рабочем окне",
+    "title": "Ошибка загрузки документа",
     "width": 1440,
     "height": 1018,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Поверх открытого списка документов сервис показывает сообщение об ошибке загрузки.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-36286.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1018
   },
   {
     "id": "sfa-9746-46558",
@@ -204,10 +207,13 @@
     "width": 800,
     "height": 966,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "В строках доступны флажки и редактирование. Счётчик внизу показывает шесть выбранных сотрудников.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-34967.webp",
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-9282-35027",
@@ -224,8 +230,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35027.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 492
   },
   {
     "id": "sfa-9282-35104",
@@ -237,10 +243,13 @@
     "width": 800,
     "height": 408,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Календарь раскрыт под полем даты рождения в заполненной форме редактирования.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-35104.webp",
+    "imageWidth": 800,
+    "imageHeight": 408
   },
   {
     "id": "sfa-9282-35602",
@@ -248,14 +257,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=9282-35602",
     "section": "MWP",
     "sourceName": "[D] CorporatePage",
-    "title": "Редактирование списка в рабочем окне",
+    "title": "Сохранение изменений в списке сотрудников",
     "width": 1440,
     "height": 1295,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "В рабочем окне виден список сотрудников и уведомление «Данные сохранены».",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-35602.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1295
   },
   {
     "id": "sfa-9282-35687",
@@ -267,10 +279,13 @@
     "width": 1440,
     "height": 1295,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Показана нижняя часть списка, число выбранных сотрудников и действия «Продолжить» и «Отменить».",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-35687.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1295
   },
   {
     "id": "sfa-9282-35120",
@@ -278,14 +293,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=9282-35120",
     "section": "MWP",
     "sourceName": "[D] Calendar",
-    "title": "Календарь выбора даты рождения",
+    "title": "Календарь выбора даты рождения · MWP",
     "width": 344,
     "height": 344,
     "role": "Компонент",
-    "reason": "Самостоятельный компонент или деталь состояния.",
+    "reason": "В календаре выделен день, над сеткой доступны переключатели месяца и года. В другом разделе Figma есть идентичный экземпляр.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-35120.webp",
+    "imageWidth": 344,
+    "imageHeight": 344
   },
   {
     "id": "sfa-9282-34997",
@@ -297,10 +315,13 @@
     "width": 800,
     "height": 966,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Строки сотрудников можно отмечать и редактировать. Внизу виден счётчик выбранных.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-34997.webp",
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-9282-35043",
@@ -317,8 +338,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35043.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 492
   },
   {
     "id": "sfa-9282-35058",
@@ -335,8 +356,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35058.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 564
   },
   {
     "id": "sfa-9317-46115",
@@ -348,10 +369,13 @@
     "width": 800,
     "height": 564,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "У обязательных полей видны пояснения. Для телефона и электронной почты показаны ошибки формата.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9317-46115.webp",
+    "imageWidth": 800,
+    "imageHeight": 564
   },
   {
     "id": "sfa-9282-35073",
@@ -368,8 +392,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35073.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 572
   },
   {
     "id": "sfa-9317-46237",
@@ -386,8 +410,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9317-46237.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 572
   },
   {
     "id": "sfa-9817-45193",
@@ -413,14 +437,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=9282-36191",
     "section": "MWP",
     "sourceName": "[D] CorporatePage",
-    "title": "Ошибка сохранения данных в рабочем окне",
+    "title": "Ошибка сохранения списка сотрудников",
     "width": 1440,
     "height": 1295,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Уведомление об ошибке появляется над рабочей панелью. Форма со списком сотрудников остаётся открытой.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:34876"
+    "sectionId": "9282:34876",
+    "src": "./screens/sfa-9282-36191.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1295
   },
   {
     "id": "sfa-9282-36913",
@@ -428,14 +455,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=9282-36913",
     "section": "MWP",
     "sourceName": "Точка старта",
-    "title": "Сервисная панель · MWP",
+    "title": "Каталог операций менеджера · MWP",
     "width": 1440,
     "height": 1499,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "В каталоге операций среди сервисов доступна карточка «Страховки для бизнеса».",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:36352"
+    "sectionId": "9282:36352",
+    "src": "./screens/sfa-9282-36913.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1499
   },
   {
     "id": "sfa-9282-36654",
@@ -488,8 +518,8 @@
     "channel": "sfa",
     "sectionId": "9282:36352",
     "src": "./screens/sfa-9785-46407.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1331,
+    "imageHeight": 471
   },
   {
     "id": "sfa-10086-45675",
@@ -605,14 +635,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=9282-37078",
     "section": "MWP",
     "sourceName": "ДМС",
-    "title": "Карточка с подробностями по застрахованным",
+    "title": "Полис ДМС со списком застрахованных",
     "width": 1266,
     "height": 1912,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Показаны карточки полиса со свёрнутым и раскрытым списком. В раскрытом состоянии доступны поля даты рождения и телефона застрахованных.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "9282:36352"
+    "sectionId": "9282:36352",
+    "src": "./screens/sfa-9282-37078.webp",
+    "imageWidth": 1266,
+    "imageHeight": 1912
   },
   {
     "id": "sfa-9282-36589",
@@ -638,14 +671,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-37181",
     "section": "Прототип",
     "sourceName": "Точка старта",
-    "title": "Точка старта",
+    "title": "Каталог операций менеджера",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Рабочая панель показывает доступные менеджеру операции. Это стартовый фрейм прототипа.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-37181.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-38804",
@@ -653,14 +689,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-38804",
     "section": "Прототип",
     "sourceName": "Загрузка данных",
-    "title": "Загрузка данных",
+    "title": "Загрузка витрины страховых продуктов",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "На время загрузки вкладки и карточки продуктов обозначены светлыми полосами.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-38804.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-38210",
@@ -668,14 +707,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-38210",
     "section": "Прототип",
     "sourceName": "Можно оформить",
-    "title": "Можно оформить",
+    "title": "Витрина доступных страховых продуктов",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "На вкладке «Можно оформить» видны карточки продуктов, параметры и кнопки оформления.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-38210.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-39351",
@@ -683,14 +725,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-39351",
     "section": "Прототип",
     "sourceName": "Оформленные",
-    "title": "Оформленные",
+    "title": "Пустой список оформленных страховок",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Выбрана вкладка «Оформленные». В рабочей области показано пустое состояние.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-39351.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-74708",
@@ -698,14 +743,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-74708",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · загрузка списка сотрудников",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "В форме уже видны срок и стоимость за сотрудника. Строки списка ещё загружаются.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-74708.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-71977",
@@ -713,14 +761,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-71977",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · сотрудник в списке",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "В форме ДМС появилась отмеченная строка сотрудника. Рядом доступны добавление и редактирование.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-71977.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-58204",
@@ -728,14 +779,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-58204",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · открытие формы сотрудника",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Менеджер видит пустые поля ФИО, даты рождения, телефона и электронной почты.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-58204.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-59172",
@@ -743,14 +797,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-59172",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · сотрудник уже добавлен",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Над заполненной формой показано сообщение о совпадении ФИО и даты рождения.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-59172.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-60391",
@@ -758,14 +815,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-60391",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · возврат к выбору сотрудников",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Открыта форма оформления ДМС с отмеченной строкой сотрудника и действием «Добавить».",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-60391.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-75685",
@@ -773,14 +833,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-75685",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · пустая анкета сотрудника",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Второй фрейм пустой формы в прототипе. Видны действия сохранения, отмены и возврата.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-75685.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-78490",
@@ -788,14 +851,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-78490",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · заполненная анкета сотрудника",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Заполнены четыре поля формы. Внизу доступны сохранение и отмена.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-78490.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-80795",
@@ -803,14 +869,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-80795",
     "section": "Прототип",
     "sourceName": "Оформление ДМС",
-    "title": "Оформление ДМС",
+    "title": "ДМС · сотрудник сохранён",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "В списке появилась выбранная строка. Уведомление подтверждает сохранение данных.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-80795.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8851-39459",
@@ -818,14 +887,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8851-39459",
     "section": "Прототип",
     "sourceName": "Подключение сраховки",
-    "title": "Условия подключения ДМС",
+    "title": "ДМС · проверка условий подключения",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Менеджер сверяет количество сотрудников, цену за сотрудника, срок и общую стоимость.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8851-39459.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8851-41054",
@@ -833,14 +905,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8851-41054",
     "section": "Прототип",
     "sourceName": "Документы",
-    "title": "Документы",
+    "title": "ДМС · документы для оформления",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "В модальном окне перечислены договор страхования и страховой полис. Доступны скачивание, продолжение и возврат.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8851-41054.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8851-42132",
@@ -848,14 +923,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8851-42132",
     "section": "Прототип",
     "sourceName": "Подписание документов",
-    "title": "Подписание документов",
+    "title": "ДМС · подписание документов",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Менеджер видит согласие на взимание премии, способы подписания и флажок о наличии подписанного заявления.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8851-42132.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8851-42968",
@@ -863,14 +941,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8851-42968",
     "section": "Прототип",
     "sourceName": "Страховка оформлена",
-    "title": "Страховка оформлена",
+    "title": "ДМС · полис оформлен",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Сообщение завершает оформление. Кнопка «К страховкам» возвращает на витрину.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8851-42968.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8840-39912",
@@ -878,14 +959,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8840-39912",
     "section": "Прототип",
     "sourceName": "-",
-    "title": "Возврат к списку страховых продуктов",
+    "title": "Возврат к оформленным полисам",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Вкладка «Оформленные» показывает карточки действующих страховок, сроки и стоимость.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8840-39912.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8851-44004",
@@ -893,14 +977,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8851-44004",
     "section": "Прототип",
     "sourceName": "Оформление Защиты иммущества",
-    "title": "Оформление защиты имущества",
+    "title": "Защита имущества · начало оформления",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "В форме показаны стоимость, следующий платёж, поля адреса и площади, выбор типа помещения.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8851-44004.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-46254",
@@ -908,14 +995,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-46254",
     "section": "Прототип",
     "sourceName": "Оформление Защиты иммущества",
-    "title": "Уточнение адреса объекта",
+    "title": "Защита имущества · подсказки адреса",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Под полем ввода разворачивается список вариантов адреса объекта.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-46254.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-47162",
@@ -923,14 +1013,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-47162",
     "section": "Прототип",
     "sourceName": "Оформление Защиты иммущества",
-    "title": "Выбор адреса объекта",
+    "title": "Защита имущества · выбранный адрес",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Адрес подставлен в форму. Менеджер может выбрать тип помещения и указать площадь.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-47162.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-48091",
@@ -938,14 +1031,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-48091",
     "section": "Прототип",
     "sourceName": "Оформление Защиты иммущества",
-    "title": "Параметры помещения",
+    "title": "Защита имущества · параметры помещения",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "В форме заполнены адрес и площадь, выбран тип помещения.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-48091.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-48738",
@@ -953,14 +1049,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-48738",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита имущества · проверка условий",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Перед подключением менеджер сверяет объект, тип помещения, стоимость и срок страхования.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-48738.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-49960",
@@ -968,14 +1067,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-49960",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита имущества · документы",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Договор и полис доступны для скачивания. Внизу есть переход дальше и возврат к предыдущему шагу.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-49960.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-51004",
@@ -983,14 +1085,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-51004",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита имущества · подписание",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Выбирается способ подписания. При подписании на бумаге менеджер отмечает наличие подписанного заявления.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-51004.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-51840",
@@ -998,14 +1103,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-51840",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита имущества · страховка оформлена",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Подтверждение об успешном оформлении содержит кнопку возврата к страховкам.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-51840.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-52553",
@@ -1013,14 +1121,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-52553",
     "section": "Прототип",
     "sourceName": "Оформление Защиты счёта",
-    "title": "Оформление Защиты счёта",
+    "title": "Защита счёта · выбор счёта",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Менеджер выбирает счёт из списка, сверяет стоимость и дату следующего платежа.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-52553.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-52652",
@@ -1028,14 +1139,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-52652",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита счёта · проверка условий",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Перед оформлением показаны выбранный счёт, стоимость, дата подключения и срок действия.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-52652.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-53029",
@@ -1043,14 +1157,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-53029",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита счёта · документы",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "В списке доступны договор страхования и полис со ссылками на скачивание.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-53029.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-53093",
@@ -1058,14 +1175,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-53093",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита счёта · подписание",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Представлены бумажная и электронная подпись. Для бумажного варианта отмечается получение заявления.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-53093.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-8863-53159",
@@ -1073,14 +1193,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8863-53159",
     "section": "Прототип",
     "sourceName": "Подключение страховки",
-    "title": "Подключение страховки",
+    "title": "Защита счёта · страховка оформлена",
     "width": 1440,
     "height": 1024,
     "role": "Сценарный прототип",
-    "reason": "Фрейм последовательности прототипа на проверенной странице. Шаги показаны на основных макетах.",
+    "reason": "Менеджер получает подтверждение и может вернуться к списку страховок.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "8840:32909"
+    "sectionId": "8840:32909",
+    "src": "./screens/sfa-8863-53159.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1024
   },
   {
     "id": "sfa-6065-34804",
@@ -1151,8 +1274,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-7696-19219.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 460,
+    "imageHeight": 56
   },
   {
     "id": "sfa-7696-19243",
@@ -1187,8 +1310,8 @@
     "channel": "sfa",
     "sectionId": "9282:34876",
     "src": "./screens/sfa-9282-35774.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 460,
+    "imageHeight": 56
   },
   {
     "id": "sfa-10650-72623",
@@ -1223,8 +1346,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-119994.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 831
   },
   {
     "id": "nib-8284-123273",
@@ -1241,8 +1364,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-123273.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 606,
+    "imageHeight": 891
   },
   {
     "id": "nib-8412-137412",
@@ -1259,8 +1382,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8412-137412.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1102
   },
   {
     "id": "nib-8412-138390",
@@ -1277,8 +1400,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8412-138390.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 605,
+    "imageHeight": 418
   },
   {
     "id": "nib-8412-139431",
@@ -1313,8 +1436,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8412-143515.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1102
   },
   {
     "id": "nib-8412-144750",
@@ -1331,8 +1454,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8412-144750.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1593
   },
   {
     "id": "nib-8284-132984",
@@ -1349,8 +1472,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-132984.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 923
   },
   {
     "id": "nib-8153-151301",
@@ -1367,8 +1490,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8153-151301.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 624,
+    "imageHeight": 390
   },
   {
     "id": "nib-8153-151307",
@@ -1403,8 +1526,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-134365.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 831
   },
   {
     "id": "nib-8284-136988",
@@ -1421,8 +1544,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-136988.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8284-137937",
@@ -1439,8 +1562,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-137937.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8550-182576",
@@ -1457,8 +1580,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8550-182576.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8304-160664",
@@ -1475,8 +1598,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8304-160664.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 606,
+    "imageHeight": 244
   },
   {
     "id": "nib-8304-165425",
@@ -1488,10 +1611,13 @@
     "width": 1600,
     "height": 1444,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Форма ДМС показывает пять сотрудников, итоговую сумму и кнопку продолжения.",
     "illustrated": false,
     "channel": "nib",
-    "sectionId": "7927:128658"
+    "sectionId": "7927:128658",
+    "src": "./screens/nib-8304-165425.webp",
+    "imageWidth": 1600,
+    "imageHeight": 1444
   },
   {
     "id": "nib-8153-151314",
@@ -1508,8 +1634,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8153-151314.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 624,
+    "imageHeight": 390
   },
   {
     "id": "nib-8246-160623",
@@ -1544,8 +1670,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8246-160607.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 375,
+    "imageHeight": 812
   },
   {
     "id": "nib-8277-165574",
@@ -1616,8 +1742,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8244-156543.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 375,
+    "imageHeight": 968
   },
   {
     "id": "nib-9350-70389",
@@ -1629,10 +1755,13 @@
     "width": 335,
     "height": 218,
     "role": "Компонент",
-    "reason": "Самостоятельный компонент или деталь состояния.",
+    "reason": "Самостоятельный компонент витрины с иллюстрацией, перечнем услуг и стоимостью за год. Изображение экспортировано непосредственно из фрейма.",
     "illustrated": false,
     "channel": "nib",
-    "sectionId": "7927:128658"
+    "sectionId": "7927:128658",
+    "src": "./screens/nib-9350-70389.webp",
+    "imageWidth": 335,
+    "imageHeight": 218
   },
   {
     "id": "nib-8304-166583",
@@ -1649,8 +1778,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8304-166583.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8192-286591",
@@ -1667,8 +1796,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8192-286591.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 768,
+    "imageHeight": 1032
   },
   {
     "id": "nib-8192-286755",
@@ -1685,8 +1814,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8192-286755.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 375,
+    "imageHeight": 835
   },
   {
     "id": "nib-8394-130038",
@@ -1721,8 +1850,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8192-286779.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 375,
+    "imageHeight": 1785
   },
   {
     "id": "nib-8195-291794",
@@ -1793,8 +1922,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8195-296748.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 375,
+    "imageHeight": 812
   },
   {
     "id": "nib-8412-156133",
@@ -1919,8 +2048,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-140913.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 606,
+    "imageHeight": 418
   },
   {
     "id": "nib-8284-139718",
@@ -1937,8 +2066,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-139718.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1068
   },
   {
     "id": "nib-8284-144845",
@@ -1955,8 +2084,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-144845.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 606,
+    "imageHeight": 569
   },
   {
     "id": "nib-8284-143273",
@@ -1991,8 +2120,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-146437.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1068
   },
   {
     "id": "nib-8412-159657",
@@ -2009,8 +2138,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8412-159657.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1572
   },
   {
     "id": "nib-8412-160841",
@@ -2027,8 +2156,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8412-160841.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1572
   },
   {
     "id": "nib-8412-162027",
@@ -2045,8 +2174,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8412-162027.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 1572
   },
   {
     "id": "nib-8303-158775",
@@ -2063,8 +2192,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8303-158775.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8303-159637",
@@ -2081,8 +2210,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8303-159637.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8304-168161",
@@ -2099,8 +2228,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8304-168161.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8305-169905",
@@ -2117,8 +2246,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8305-169905.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8304-167340",
@@ -2135,8 +2264,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8304-167340.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 998
   },
   {
     "id": "nib-8659-208594",
@@ -2153,8 +2282,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8659-208594.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1600,
+    "imageHeight": 910
   },
   {
     "id": "nib-8659-207404",
@@ -2189,8 +2318,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-147600.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 606,
+    "imageHeight": 490
   },
   {
     "id": "nib-8284-148943",
@@ -2207,8 +2336,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-148943.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 606,
+    "imageHeight": 498
   },
   {
     "id": "nib-8284-150186",
@@ -2225,8 +2354,8 @@
     "channel": "nib",
     "sectionId": "7927:128658",
     "src": "./screens/nib-8284-150186.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 606,
+    "imageHeight": 498
   },
   {
     "id": "sfa-6820-22263",
@@ -2238,10 +2367,13 @@
     "width": 800,
     "height": 966,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Внизу формы указан счётчик пяти выбранных сотрудников.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-6820-22263.webp",
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-6820-22585",
@@ -2253,10 +2385,13 @@
     "width": 800,
     "height": 966,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "У недоступных для выбора строк показаны подсказки, какие контакты нужно добавить.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-6820-22585.webp",
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-6754-40165",
@@ -2345,8 +2480,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-7500-35760.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 366
   },
   {
     "id": "sfa-9166-36946",
@@ -2354,14 +2489,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=9166-36946",
     "section": "Страхование",
     "sourceName": "[D] CorporatePage",
-    "title": "Документы в контексте рабочей панели",
+    "title": "Документы · ошибка загрузки в рабочей панели",
     "width": 1440,
     "height": 1018,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Список договора и полиса остаётся открытым, а поверх панели видно сообщение об ошибке загрузки документа.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-9166-36946.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1018
   },
   {
     "id": "sfa-5774-42435",
@@ -2378,8 +2516,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-5774-42435.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 498
   },
   {
     "id": "sfa-5774-42444",
@@ -2396,8 +2534,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-5774-42444.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 342
   },
   {
     "id": "sfa-6820-25477",
@@ -2409,10 +2547,13 @@
     "width": 800,
     "height": 966,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Редактирование открывается из строки сотрудника. Внизу формы показано число выбранных.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-6820-25477.webp",
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-5853-62382",
@@ -2424,10 +2565,13 @@
     "width": 800,
     "height": 492,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "В заполненной форме доступны изменение данных, сохранение и отмена.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-5853-62382.webp",
+    "imageWidth": 800,
+    "imageHeight": 492
   },
   {
     "id": "sfa-5841-26687",
@@ -2439,10 +2583,13 @@
     "width": 800,
     "height": 408,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "В редактируемой форме открыт календарь с переключателями месяца и года.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-5841-26687.webp",
+    "imageWidth": 800,
+    "imageHeight": 408
   },
   {
     "id": "sfa-8461-24361",
@@ -2450,14 +2597,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8461-24361",
     "section": "Страхование",
     "sourceName": "[D] CorporatePage",
-    "title": "Оформление ДМС в рабочей панели",
+    "title": "ДМС · сохранение данных в рабочей панели",
     "width": 1440,
     "height": 1295,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Над списком сотрудников отображается подтверждение «Данные сохранены».",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-8461-24361.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1295
   },
   {
     "id": "sfa-8461-22416",
@@ -2469,10 +2619,13 @@
     "width": 1440,
     "height": 1295,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "В прокрученной форме видны отмеченные сотрудники, счётчик и действия продолжения и отмены.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-8461-22416.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1295
   },
   {
     "id": "sfa-5841-26698",
@@ -2480,14 +2633,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=5841-26698",
     "section": "Страхование",
     "sourceName": "[D] Calendar",
-    "title": "Календарь выбора даты",
+    "title": "Календарь выбора даты · Страхование",
     "width": 344,
     "height": 344,
     "role": "Компонент",
-    "reason": "Самостоятельный компонент или деталь состояния.",
+    "reason": "Отдельный календарь с выделенным днём. В разделе MWP есть идентичный по изображению экземпляр.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-5841-26698.webp",
+    "imageWidth": 344,
+    "imageHeight": 344
   },
   {
     "id": "sfa-5841-26911",
@@ -2499,10 +2655,13 @@
     "width": 800,
     "height": 966,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Список в форме ДМС сохраняет выбранные строки и показывает общее количество.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-5841-26911.webp",
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-5853-62014",
@@ -2514,10 +2673,13 @@
     "width": 800,
     "height": 492,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Анкета нового сотрудника заполнена и готова к добавлению.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-5853-62014.webp",
+    "imageWidth": 800,
+    "imageHeight": 492
   },
   {
     "id": "sfa-5853-61796",
@@ -2529,10 +2691,13 @@
     "width": 800,
     "height": 564,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Подписи указывают, какие обязательные поля нужно заполнить.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-5853-61796.webp",
+    "imageWidth": 800,
+    "imageHeight": 564
   },
   {
     "id": "sfa-8497-25340",
@@ -2544,10 +2709,13 @@
     "width": 800,
     "height": 572,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Над формой показано предупреждение о ранее добавленном сотруднике. Действие добавления недоступно.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-8497-25340.webp",
+    "imageWidth": 800,
+    "imageHeight": 572
   },
   {
     "id": "sfa-6820-28696",
@@ -2564,8 +2732,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-6820-28696.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 958
   },
   {
     "id": "sfa-5957-59325",
@@ -2582,8 +2750,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-5957-59325.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 676
   },
   {
     "id": "sfa-7348-18515",
@@ -2600,8 +2768,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-7348-18515.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 676
   },
   {
     "id": "sfa-8328-22002",
@@ -2609,14 +2777,17 @@
     "url": "https://www.figma.com/design/iF3QFBQOp6lVMgyCW8iOsY/Нефинансовые-сервисы?node-id=8328-22002",
     "section": "Страхование",
     "sourceName": "[D] CorporatePage",
-    "title": "Рабочая панель с формой оформления",
+    "title": "ДМС · ошибка сохранения в рабочей панели",
     "width": 1440,
     "height": 1295,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Список остаётся открытым после сообщения «Не удалось сохранить данные».",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-8328-22002.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1295
   },
   {
     "id": "sfa-7663-19230",
@@ -2628,10 +2799,13 @@
     "width": 800,
     "height": 966,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "У части сотрудников показаны подсказки о недостающих контактах. Остальные строки можно выбрать.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-7663-19230.webp",
+    "imageWidth": 800,
+    "imageHeight": 966
   },
   {
     "id": "sfa-7516-20765",
@@ -2643,10 +2817,13 @@
     "width": 800,
     "height": 540,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Отдельные сообщения объясняют совпадения телефона и почты с уже существующими данными.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-7516-20765.webp",
+    "imageWidth": 800,
+    "imageHeight": 540
   },
   {
     "id": "sfa-7711-18615",
@@ -2681,8 +2858,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-7516-19861.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 498
   },
   {
     "id": "sfa-5774-40312",
@@ -2699,8 +2876,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-5774-40312.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 840
   },
   {
     "id": "sfa-5874-20235",
@@ -2712,10 +2889,13 @@
     "width": 800,
     "height": 848,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "В форме защиты имущества заполнен кадастровый номер. Поле площади доступно рядом.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-5874-20235.webp",
+    "imageWidth": 800,
+    "imageHeight": 848
   },
   {
     "id": "sfa-9101-45065",
@@ -2727,10 +2907,13 @@
     "width": 800,
     "height": 848,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Показан заполненный вариант формы с типом помещения, кадастровым номером и площадью.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-9101-45065.webp",
+    "imageWidth": 800,
+    "imageHeight": 848
   },
   {
     "id": "sfa-5957-44299",
@@ -2747,8 +2930,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-5957-44299.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 712
   },
   {
     "id": "sfa-7516-19874",
@@ -2801,8 +2984,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-6128-86663.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 840
   },
   {
     "id": "sfa-6128-86724",
@@ -2819,8 +3002,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-6128-86724.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 840
   },
   {
     "id": "sfa-6128-86779",
@@ -2837,8 +3020,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-6128-86779.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 840
   },
   {
     "id": "sfa-6128-86836",
@@ -2891,8 +3074,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-6128-86950.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 864
   },
   {
     "id": "sfa-5774-40594",
@@ -2909,8 +3092,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-5774-40594.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 416
   },
   {
     "id": "sfa-6827-39739",
@@ -2927,8 +3110,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-6827-39739.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 416
   },
   {
     "id": "sfa-9160-33977",
@@ -2945,8 +3128,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-9160-33977.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 416
   },
   {
     "id": "sfa-9160-34167",
@@ -2963,8 +3146,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-9160-34167.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 376
   },
   {
     "id": "sfa-5957-52593",
@@ -2981,8 +3164,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-5957-52593.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 660
   },
   {
     "id": "sfa-7711-18738",
@@ -3017,8 +3200,8 @@
     "channel": "sfa",
     "sectionId": "5703:178278",
     "src": "./screens/sfa-7516-20313.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 800,
+    "imageHeight": 498
   },
   {
     "id": "sfa-8516-151237",
@@ -3048,10 +3231,13 @@
     "width": 720,
     "height": 394,
     "role": "Компонент",
-    "reason": "Самостоятельный компонент или деталь состояния.",
+    "reason": "У выбранной строки стоит отметка. Каждый вариант содержит остаток и подпись рублёвого счёта.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "5703:178278"
+    "sectionId": "5703:178278",
+    "src": "./screens/sfa-8404-25269.webp",
+    "imageWidth": 720,
+    "imageHeight": 394
   },
   {
     "id": "sfa-8290-19870",
@@ -3068,8 +3254,8 @@
     "channel": "sfa",
     "sectionId": "6100:61959",
     "src": "./screens/sfa-8290-19870.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1331,
+    "imageHeight": 889
   },
   {
     "id": "sfa-6257-46822",
@@ -3086,8 +3272,8 @@
     "channel": "sfa",
     "sectionId": "6100:61959",
     "src": "./screens/sfa-6257-46822.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1331,
+    "imageHeight": 852
   },
   {
     "id": "sfa-6082-60020",
@@ -3104,8 +3290,8 @@
     "channel": "sfa",
     "sectionId": "6100:61959",
     "src": "./screens/sfa-6082-60020.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1331,
+    "imageHeight": 826
   },
   {
     "id": "sfa-6257-46292",
@@ -3122,8 +3308,8 @@
     "channel": "sfa",
     "sectionId": "6100:61959",
     "src": "./screens/sfa-6257-46292.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1331,
+    "imageHeight": 743
   },
   {
     "id": "sfa-6466-41714",
@@ -3140,8 +3326,8 @@
     "channel": "sfa",
     "sectionId": "6100:61959",
     "src": "./screens/sfa-6466-41714.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1331,
+    "imageHeight": 847
   },
   {
     "id": "sfa-8137-19854",
@@ -3158,8 +3344,8 @@
     "channel": "sfa",
     "sectionId": "6100:61959",
     "src": "./screens/sfa-8137-19854.webp",
-    "imageWidth": null,
-    "imageHeight": null
+    "imageWidth": 1331,
+    "imageHeight": 1077
   },
   {
     "id": "sfa-8840-42205",
@@ -3171,10 +3357,13 @@
     "width": 1264,
     "height": 1911,
     "role": "Компонент",
-    "reason": "Самостоятельный компонент или деталь состояния.",
+    "reason": "Верхняя группа показывает компактные карточки, нижняя — те же продукты с раскрытым перечнем покрытия.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "6100:61959"
+    "sectionId": "6100:61959",
+    "src": "./screens/sfa-8840-42205.webp",
+    "imageWidth": 1264,
+    "imageHeight": 1911
   },
   {
     "id": "sfa-8137-21262",
@@ -3240,10 +3429,13 @@
     "width": 2838,
     "height": 1648,
     "role": "Дополнительное состояние",
-    "reason": "Дополнительная компоновка, состояние или вариант сценария. Полный фрейм доступен в Figma.",
+    "reason": "Рядом показаны действующие и приостановленные полисы. У одной из карточек ДМС раскрыты сведения о застрахованных.",
     "illustrated": false,
     "channel": "sfa",
-    "sectionId": "6100:61959"
+    "sectionId": "6100:61959",
+    "src": "./screens/sfa-8851-43689.webp",
+    "imageWidth": 2838,
+    "imageHeight": 1648
   },
   {
     "id": "sfa-8137-20547",

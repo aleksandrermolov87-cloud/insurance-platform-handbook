@@ -3115,4508 +3115,5409 @@
   ],
   "edges": [
     {
-      "source": "b56",
-      "target": "s80",
-      "label": "Позиция источника · обобщено"
+      "source": "s80",
+      "target": "o129",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
+      "source": "o129",
       "target": "s82",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o129",
       "target": "b5",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o129",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s49",
       "target": "s18",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s18",
       "target": "s67",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "s49",
       "target": "s39",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s39",
       "target": "s68",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b56",
-      "target": "s67",
-      "label": "Позиция источника · обобщено"
+      "source": "s67",
+      "target": "o130",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
+      "source": "o130",
       "target": "s68",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o130",
       "target": "b6",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o130",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o131",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o131",
-      "label": "Функциональная область · обобщено"
+      "source": "o131",
+      "target": "s68",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o131",
       "target": "b7",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o131",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s39",
       "target": "s69",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o132",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o132",
       "target": "s69",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o132",
       "target": "b8",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o132",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o133",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
+      "source": "o133",
       "target": "s79",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o133",
       "target": "b5",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o133",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
-      "target": "s48",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b56",
-      "target": "s17",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b56",
-      "target": "o134",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b56",
+      "source": "s48",
       "target": "s70",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
+    },
+    {
+      "source": "s17",
+      "target": "s48",
+      "relation": "contains",
+      "label": "Включает модуль"
+    },
+    {
+      "source": "s67",
+      "target": "o134",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o134",
+      "target": "s70",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o134",
       "target": "b5",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o134",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s80",
       "target": "o135",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o135",
       "target": "s70",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o135",
       "target": "b5",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o135",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o136",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o136",
-      "label": "Функциональная область · обобщено"
+      "source": "o136",
+      "target": "s69",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b48",
+      "source": "o136",
       "target": "b8",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o136",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o137",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o137",
-      "label": "Функциональная область · обобщено"
+      "source": "o137",
+      "target": "s69",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o137",
       "target": "b13",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o137",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s18",
       "target": "s71",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b56",
-      "target": "s71",
-      "label": "Позиция источника · обобщено"
+      "source": "s71",
+      "target": "o138",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
-      "target": "o138",
-      "label": "Позиция источника · обобщено"
+      "source": "o138",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o138",
       "target": "b9",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o138",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o139",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o139",
-      "label": "Функциональная область · обобщено"
+      "source": "o139",
+      "target": "s71",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o139",
       "target": "b10",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o139",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o140",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o140",
-      "label": "Функциональная область · обобщено"
+      "source": "o140",
+      "target": "s69",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o140",
       "target": "b9",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o140",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s49",
       "target": "s19",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b56",
+      "source": "s19",
       "target": "s63",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o141",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o141",
       "target": "s63",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o141",
       "target": "b3",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o141",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s27",
       "target": "s64",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s63",
       "target": "o142",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o142",
       "target": "s64",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o142",
       "target": "b3",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o142",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s27",
       "target": "s20",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s20",
       "target": "s65",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s64",
       "target": "o143",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
+      "source": "o143",
       "target": "s65",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o143",
       "target": "b3",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o143",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
-      "target": "s29",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b56",
-      "target": "o144",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b56",
+      "source": "s29",
       "target": "s66",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b48",
+      "source": "s63",
       "target": "o144",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
-      "target": "o144",
-      "label": "Позиция источника · обобщено"
+      "source": "o144",
+      "target": "s66",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
-      "target": "o145",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b48",
-      "target": "o145",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b56",
+      "source": "o144",
       "target": "b3",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
+    },
+    {
+      "source": "b56",
+      "target": "o144",
+      "relation": "references",
+      "label": "Описывает операцию"
+    },
+    {
+      "source": "s64",
+      "target": "o145",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o145",
+      "target": "s66",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o145",
+      "target": "b3",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o145",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
       "source": "s41",
       "target": "s51",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
-      "source": "b56",
+      "source": "s51",
       "target": "s73",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s39",
       "target": "s72",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s72",
       "target": "o146",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o146",
-      "label": "Функциональная область · обобщено"
+      "source": "o146",
+      "target": "s73",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b48",
+      "source": "o146",
       "target": "b9",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o146",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b48",
-      "target": "s72",
-      "label": "Функциональная область · обобщено"
+      "source": "s72",
+      "target": "o147",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o147",
       "target": "s73",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o147",
       "target": "b9",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o147",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s71",
       "target": "o148",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o148",
       "target": "s67",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o148",
       "target": "b1",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o148",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
+      "source": "s71",
+      "target": "o149",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o149",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o149",
+      "target": "b9",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
+    },
+    {
       "source": "b56",
       "target": "o149",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b48",
-      "target": "o149",
-      "label": "Функциональная область · обобщено"
+      "source": "s71",
+      "target": "o150",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
-      "target": "o149",
-      "label": "Позиция источника · обобщено"
+      "source": "o150",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b48",
-      "target": "o149",
-      "label": "Функциональная область · обобщено"
+      "source": "o150",
+      "target": "b9",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o150",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b48",
-      "target": "o150",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b56",
-      "target": "o150",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b48",
-      "target": "o150",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b56",
+      "source": "s71",
       "target": "o151",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o151",
-      "label": "Функциональная область · обобщено"
+      "source": "o151",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o151",
       "target": "b11",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o151",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o152",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o152",
-      "label": "Функциональная область · обобщено"
+      "source": "o152",
+      "target": "s69",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o152",
       "target": "b8",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o152",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s67",
       "target": "o153",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o153",
-      "label": "Функциональная область · обобщено"
+      "source": "o153",
+      "target": "s69",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o153",
       "target": "b14",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o153",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
+    },
+    {
+      "source": "s72",
+      "target": "o154",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o154",
+      "target": "s73",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o154",
+      "target": "b8",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o154",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b48",
-      "target": "o154",
-      "label": "Функциональная область · обобщено"
+      "source": "s75",
+      "target": "o155",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
-      "target": "o154",
-      "label": "Позиция источника · обобщено"
+      "source": "o155",
+      "target": "s74",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b48",
-      "target": "o154",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b56",
+      "source": "s51",
       "target": "s75",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s39",
       "target": "s74",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b56",
-      "target": "s51",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b48",
-      "target": "s74",
-      "label": "Функциональная область · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
       "source": "o155",
       "target": "b13",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o155",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
-      "target": "s62",
-      "label": "Позиция источника · обобщено"
+      "source": "s62",
+      "target": "o156",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b56",
+      "source": "o156",
       "target": "s61",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s16",
       "target": "s61",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "s39",
       "target": "s62",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "o156",
       "target": "b1",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o156",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s11",
       "target": "s76",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s39",
       "target": "s77",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b56",
+      "source": "s77",
       "target": "o157",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o157",
-      "label": "Функциональная область · обобщено"
+      "source": "o157",
+      "target": "s76",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b48",
+      "source": "o157",
       "target": "b14",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o157",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b48",
-      "target": "s77",
-      "label": "Функциональная область · обобщено"
+      "source": "s77",
+      "target": "o158",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o158",
       "target": "s76",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o158",
       "target": "b15",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o158",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s71",
       "target": "o159",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o159",
-      "label": "Функциональная область · обобщено"
+      "source": "o159",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o159",
       "target": "b2",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o159",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s71",
       "target": "o160",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o160",
-      "label": "Функциональная область · обобщено"
+      "source": "o160",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o160",
       "target": "b4",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o160",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "s50",
       "target": "o161",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
+      "source": "o161",
       "target": "s71",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b56",
+      "source": "o161",
       "target": "b12",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b56",
       "target": "o161",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b56",
+      "source": "b3",
       "target": "s20",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
-      "target": "b5",
-      "label": "Позиция источника · обобщено"
+      "source": "b5",
+      "target": "s1",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
-      "target": "b4",
-      "label": "Позиция источника · обобщено"
+      "source": "b4",
+      "target": "s11",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
+      "source": "b4",
       "target": "s13",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
-      "target": "b1",
-      "label": "Позиция источника · обобщено"
+      "source": "b1",
+      "target": "s11",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b48",
-      "target": "b1",
-      "label": "Функциональная область · обобщено"
+      "source": "b1",
+      "target": "s13",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
+      "source": "b8",
       "target": "s39",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b48",
+      "source": "b14",
       "target": "s39",
-      "label": "Функциональная область · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
-      "target": "b9",
-      "label": "Позиция источника · обобщено"
+      "source": "b9",
+      "target": "s39",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
-      "target": "b13",
-      "label": "Позиция источника · обобщено"
+      "source": "b13",
+      "target": "s39",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b56",
-      "target": "b2",
-      "label": "Позиция источника · обобщено"
+      "source": "b2",
+      "target": "s11",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b48",
-      "target": "b2",
-      "label": "Функциональная область · обобщено"
+      "source": "b2",
+      "target": "s13",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b58",
-      "target": "s57",
-      "label": "Позиция источника · обобщено"
+      "source": "s57",
+      "target": "s90",
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
       "source": "s56",
       "target": "s44",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s44",
       "target": "s78",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b58",
-      "target": "s78",
-      "label": "Позиция источника · обобщено"
+      "source": "s78",
+      "target": "o111",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b58",
+      "source": "o111",
       "target": "s90",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o111",
       "target": "b19",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b58",
       "target": "o111",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b58",
-      "target": "s58",
-      "label": "Позиция источника · обобщено"
+      "source": "s58",
+      "target": "s46",
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b58",
+      "source": "s46",
       "target": "s91",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b58",
+      "source": "s90",
       "target": "o112",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b58",
+      "source": "o112",
       "target": "s91",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o112",
       "target": "b19",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b58",
       "target": "o112",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b58",
+      "source": "s91",
       "target": "o113",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o113",
       "target": "s45",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o113",
       "target": "b19",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b58",
       "target": "o113",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b58",
+      "source": "s78",
       "target": "o114",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b58",
+      "source": "o114",
       "target": "s90",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o114",
       "target": "b19",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b58",
       "target": "o114",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b58",
+      "source": "b19",
       "target": "s42",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
       "source": "s53",
       "target": "s1",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s1",
       "target": "s80",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b57",
+      "source": "s53",
       "target": "s81",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b57",
+      "source": "s80",
       "target": "o115",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b54",
+      "source": "o115",
       "target": "s81",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o115",
       "target": "b16",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o115",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s85",
       "target": "o123",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b57",
+      "source": "o123",
       "target": "s84",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b57",
+      "source": "o123",
       "target": "b18",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
-      "source": "b54",
+      "source": "b57",
       "target": "o123",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b57",
-      "target": "s85",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b57",
+      "source": "s85",
       "target": "o124",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o124",
+      "target": "s81",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o124",
       "target": "b16",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o124",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s2",
       "target": "s82",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
       "source": "s53",
       "target": "s2",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
-      "source": "b57",
+      "source": "s82",
       "target": "o125",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b54",
-      "target": "o125",
-      "label": "Функциональная область · обобщено"
+      "source": "o125",
+      "target": "s81",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o125",
       "target": "b16",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o125",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s84",
       "target": "o126",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b57",
+      "source": "o126",
       "target": "s83",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b54",
+      "source": "s33",
       "target": "s83",
-      "label": "Функциональная область · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b54",
+      "source": "o126",
       "target": "b18",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
-      "source": "b54",
+      "source": "b57",
       "target": "o126",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s85",
       "target": "o127",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b57",
+      "source": "o127",
       "target": "s78",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o127",
       "target": "b16",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o127",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s2",
       "target": "s79",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b57",
+      "source": "s85",
       "target": "o128",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b57",
+      "source": "o128",
       "target": "s79",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o128",
       "target": "b16",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o128",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s80",
       "target": "o116",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b54",
-      "target": "o116",
-      "label": "Функциональная область · обобщено"
+      "source": "o116",
+      "target": "s81",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o116",
       "target": "b16",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o116",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
-      "target": "s54",
-      "label": "Позиция источника · обобщено"
+      "source": "s54",
+      "target": "s84",
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
       "source": "s53",
       "target": "s3",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s3",
       "target": "s85",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b57",
+      "source": "s85",
       "target": "o117",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b54",
-      "target": "o117",
-      "label": "Функциональная область · обобщено"
+      "source": "o117",
+      "target": "s84",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b57",
+      "source": "o117",
       "target": "b17",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o117",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s84",
       "target": "o118",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b57",
+      "source": "o118",
       "target": "s86",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s55",
       "target": "s31",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
-      "source": "b54",
+      "source": "s31",
       "target": "s86",
-      "label": "Функциональная область · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b54",
+      "source": "o118",
       "target": "b17",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
-      "source": "b54",
+      "source": "b57",
       "target": "o118",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s85",
       "target": "o119",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b54",
+      "source": "o119",
       "target": "s84",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b54",
-      "target": "o119",
-      "label": "Функциональная область · обобщено"
+      "source": "o119",
+      "target": "b18",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o119",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s55",
       "target": "s33",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
-      "source": "b57",
+      "source": "s84",
       "target": "o120",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b57",
+      "source": "o120",
       "target": "s87",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s33",
       "target": "s87",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b54",
-      "target": "o120",
-      "label": "Функциональная область · обобщено"
+      "source": "o120",
+      "target": "b18",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o120",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
-      "target": "s34",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b57",
-      "target": "o121",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b57",
+      "source": "s34",
       "target": "s88",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b54",
+      "source": "s85",
       "target": "o121",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o121",
+      "target": "s88",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o121",
+      "target": "b18",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o121",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
+      "source": "s89",
+      "target": "o122",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o122",
+      "target": "s88",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s33",
       "target": "s89",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
+    },
+    {
+      "source": "o122",
+      "target": "b18",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b57",
       "target": "o122",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b54",
-      "target": "s89",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b54",
-      "target": "o122",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b57",
-      "target": "o122",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b57",
-      "target": "b16",
-      "label": "Позиция источника · обобщено"
+      "source": "b16",
+      "target": "s2",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b57",
+      "source": "b18",
       "target": "s33",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b57",
+      "source": "b17",
       "target": "s31",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b60",
+      "source": "s67",
       "target": "o162",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o162",
       "target": "s63",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o162",
       "target": "b33",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o162",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s38",
       "target": "s102",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s50",
       "target": "o167",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o167",
-      "label": "Позиция источника · обобщено"
+      "source": "o167",
+      "target": "s102",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o167",
       "target": "b34",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o167",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s71",
       "target": "o168",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o168",
-      "label": "Позиция источника · обобщено"
+      "source": "o168",
+      "target": "s102",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o168",
       "target": "b34",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o168",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s71",
       "target": "o169",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o169",
       "target": "s109",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s60",
       "target": "s109",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "s47",
       "target": "s60",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "o169",
       "target": "b39",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o169",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s49",
       "target": "s36",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b60",
+      "source": "s36",
       "target": "s103",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s67",
       "target": "o170",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o170",
-      "label": "Позиция источника · обобщено"
+      "source": "o170",
+      "target": "s103",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o170",
       "target": "b35",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o170",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s36",
       "target": "s104",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s105",
       "target": "o171",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o171",
-      "label": "Позиция источника · обобщено"
+      "source": "o171",
+      "target": "s104",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "s7",
       "target": "s105",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
-      "target": "s15",
-      "label": "Позиция источника · обобщено"
+      "source": "s15",
+      "target": "s7",
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b60",
+      "source": "o171",
       "target": "b35",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o171",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s64",
       "target": "o172",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o172",
       "target": "s66",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o172",
       "target": "b24",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o172",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s63",
       "target": "o173",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o173",
       "target": "s64",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o173",
       "target": "b33",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o173",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s27",
       "target": "s24",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
-      "source": "b60",
+      "source": "s64",
       "target": "o174",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o174",
       "target": "s92",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s24",
       "target": "s92",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "o174",
       "target": "b33",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o174",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s50",
       "target": "o175",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o175",
       "target": "s108",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o175",
+      "target": "b34",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o175",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "o175",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s19",
       "target": "s106",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s71",
       "target": "o163",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o163",
-      "label": "Позиция источника · обобщено"
+      "source": "o163",
+      "target": "s106",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o163",
       "target": "b36",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o163",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
       "source": "s18",
       "target": "s93",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s71",
       "target": "o176",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o176",
       "target": "s93",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o176",
       "target": "b20",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o176",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
-      "target": "s94",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
+      "source": "s94",
       "target": "o177",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o177",
+      "target": "s93",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s26",
       "target": "s94",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "o177",
       "target": "b21",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o177",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s18",
       "target": "s96",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s71",
       "target": "o178",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o178",
       "target": "s96",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o178",
       "target": "b33",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o178",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s96",
       "target": "o179",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o179",
       "target": "s67",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o179",
       "target": "b33",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o179",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s96",
       "target": "o180",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o180",
       "target": "s95",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "s49",
       "target": "s25",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b60",
-      "target": "s25",
-      "label": "Позиция источника · обобщено"
+      "source": "s25",
+      "target": "s95",
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "o180",
       "target": "b22",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o180",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s67",
       "target": "o181",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o181",
-      "label": "Позиция источника · обобщено"
+      "source": "o181",
+      "target": "s106",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o181",
       "target": "b36",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o181",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s18",
       "target": "s101",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s71",
       "target": "o182",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o182",
-      "label": "Позиция источника · обобщено"
+      "source": "o182",
+      "target": "s101",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o182",
       "target": "b31",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o182",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s71",
       "target": "o183",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o183",
-      "label": "Позиция источника · обобщено"
+      "source": "o183",
+      "target": "s101",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o183",
       "target": "b31",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o183",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s106",
       "target": "o164",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o164",
       "target": "s107",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
-      "target": "s59",
-      "label": "Позиция источника · обобщено"
+      "source": "s59",
+      "target": "s37",
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b60",
+      "source": "s37",
       "target": "s107",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
+    },
+    {
+      "source": "o164",
+      "target": "b36",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o164",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
-      "target": "o164",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
+      "source": "s104",
       "target": "o184",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o184",
       "target": "s103",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o184",
+      "target": "b35",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o184",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "o184",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s50",
       "target": "o185",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o185",
-      "label": "Позиция источника · обобщено"
+      "source": "o185",
+      "target": "s71",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o185",
+      "target": "b34",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o185",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "o185",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
       "source": "s49",
       "target": "s26",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s26",
       "target": "s108",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
-      "source": "b60",
+      "source": "s108",
       "target": "o165",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
+      "source": "o165",
       "target": "s71",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o165",
       "target": "b37",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o165",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "s63",
       "target": "o166",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b60",
-      "target": "o166",
-      "label": "Позиция источника · обобщено"
+      "source": "o166",
+      "target": "s66",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b60",
+      "source": "o166",
       "target": "b33",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b60",
       "target": "o166",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b60",
+      "source": "b24",
       "target": "s29",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b60",
-      "target": "b24",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "s26",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "b39",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "b22",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "s38",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "s18",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "b20",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
-      "target": "b21",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b60",
+      "source": "b24",
       "target": "s37",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b60",
+      "source": "b37",
+      "target": "s26",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b39",
+      "target": "s47",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b22",
+      "target": "s25",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b34",
+      "target": "s38",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b34",
       "target": "s18",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b60",
+      "source": "b20",
+      "target": "s18",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b21",
+      "target": "s18",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b36",
+      "target": "s37",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b31",
+      "target": "s18",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
+    },
+    {
+      "source": "b33",
       "target": "s24",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b60",
+      "source": "b35",
       "target": "s36",
-      "label": "Позиция источника · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b59",
+      "source": "s63",
       "target": "o186",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o186",
-      "label": "Функциональная область · обобщено"
+      "source": "o186",
+      "target": "s66",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b59",
+      "source": "o186",
       "target": "b25",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o186",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o190",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o190",
       "target": "s78",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o190",
       "target": "b4",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o190",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o191",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o191",
-      "label": "Функциональная область · обобщено"
+      "source": "o191",
+      "target": "s78",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o191",
       "target": "b26",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o191",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s56",
       "target": "s43",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b59",
+      "source": "s78",
       "target": "o192",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o192",
-      "label": "Функциональная область · обобщено"
+      "source": "o192",
+      "target": "s43",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b59",
+      "source": "o192",
       "target": "b38",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o192",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s53",
       "target": "s97",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает компонент"
     },
     {
-      "source": "b50",
-      "target": "s97",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b59",
+      "source": "s97",
       "target": "o193",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o193",
+      "target": "s80",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o193",
       "target": "b27",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o193",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s44",
       "target": "s42",
-      "label": "Позиция источника · обобщено"
+      "relation": "contains",
+      "label": "Включает модуль"
     },
     {
-      "source": "b59",
+      "source": "s78",
       "target": "o194",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
+      "source": "o194",
       "target": "s42",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o194",
       "target": "b4",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o194",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s78",
       "target": "o195",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o195",
-      "label": "Функциональная область · обобщено"
+      "source": "o195",
+      "target": "s42",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o195",
       "target": "b26",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o195",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o196",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o196",
-      "label": "Функциональная область · обобщено"
+      "source": "o196",
+      "target": "s78",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o196",
       "target": "b28",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o196",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o197",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o197",
-      "label": "Функциональная область · обобщено"
+      "source": "o197",
+      "target": "s43",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b50",
+      "source": "o197",
       "target": "b38",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o197",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o198",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o198",
       "target": "s79",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o198",
       "target": "b27",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o198",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s63",
       "target": "o199",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o199",
       "target": "s64",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o199",
       "target": "b30",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o199",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s64",
       "target": "o200",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o200",
       "target": "s98",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s27",
       "target": "s21",
+      "relation": "contains",
       "label": "Включает модуль"
     },
     {
       "source": "s21",
       "target": "s98",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "o200",
       "target": "b30",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o200",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s64",
       "target": "o201",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o201",
       "target": "s99",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s24",
       "target": "s99",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "o201",
       "target": "b29",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o201",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s64",
       "target": "o202",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o202",
-      "label": "Функциональная область · обобщено"
+      "source": "o202",
+      "target": "s66",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b50",
+      "source": "o202",
       "target": "b25",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o202",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s71",
       "target": "o203",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o203",
       "target": "s96",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o203",
       "target": "b30",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o203",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s96",
       "target": "o204",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o204",
-      "label": "Функциональная область · обобщено"
+      "source": "o204",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o204",
       "target": "b30",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o204",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o205",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o205",
       "target": "s101",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o205",
+      "target": "b32",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
-      "target": "b32",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b50",
       "target": "o205",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b59",
-      "target": "o206",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b50",
-      "target": "o206",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b50",
-      "target": "b32",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b59",
-      "target": "o206",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
-      "target": "o207",
-      "label": "Позиция источника · обобщено"
+      "source": "s67",
+      "target": "o206",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o207",
-      "label": "Функциональная область · обобщено"
+      "source": "o206",
+      "target": "s101",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o206",
+      "target": "b32",
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
+      "target": "o206",
+      "relation": "references",
+      "label": "Описывает операцию"
+    },
+    {
+      "source": "s67",
+      "target": "o207",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o207",
+      "target": "s101",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "o207",
       "target": "b31",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o207",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o208",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o208",
-      "label": "Функциональная область · обобщено"
+      "source": "o208",
+      "target": "s101",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b50",
+      "source": "o208",
       "target": "b31",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o208",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s71",
       "target": "o209",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o209",
-      "label": "Функциональная область · обобщено"
+      "source": "o209",
+      "target": "s96",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o209",
       "target": "b4",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o209",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s96",
       "target": "o210",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o210",
-      "label": "Функциональная область · обобщено"
+      "source": "o210",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o210",
       "target": "b4",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o210",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s71",
       "target": "o211",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o211",
-      "label": "Функциональная область · обобщено"
+      "source": "o211",
+      "target": "s96",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o211",
       "target": "b28",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o211",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s96",
       "target": "o212",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o212",
-      "label": "Функциональная область · обобщено"
+      "source": "o212",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o212",
       "target": "b28",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o212",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s71",
       "target": "o213",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o213",
-      "label": "Функциональная область · обобщено"
+      "source": "o213",
+      "target": "s96",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o213",
       "target": "b26",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o213",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s71",
       "target": "o187",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o187",
       "target": "s63",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o187",
       "target": "b29",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o187",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s96",
       "target": "o214",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o214",
-      "label": "Функциональная область · обобщено"
+      "source": "o214",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o214",
       "target": "b26",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o214",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s71",
       "target": "o215",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o215",
-      "label": "Функциональная область · обобщено"
+      "source": "o215",
+      "target": "s96",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o215",
       "target": "b27",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o215",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s96",
       "target": "o216",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o216",
-      "label": "Функциональная область · обобщено"
+      "source": "o216",
+      "target": "s67",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o216",
       "target": "b27",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o216",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o217",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o217",
-      "label": "Функциональная область · обобщено"
+      "source": "o217",
+      "target": "s63",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o217",
       "target": "b3",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o217",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s63",
       "target": "o218",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o218",
-      "label": "Функциональная область · обобщено"
+      "source": "o218",
+      "target": "s64",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o218",
       "target": "b3",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o218",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s64",
       "target": "o219",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
+      "source": "o219",
       "target": "s65",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o219",
       "target": "b3",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o219",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
-      "target": "s100",
-      "label": "Позиция источника · обобщено"
+      "source": "s100",
+      "target": "o220",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b59",
-      "target": "o220",
-      "label": "Позиция источника · обобщено"
+      "source": "o220",
+      "target": "s97",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s2",
       "target": "s100",
+      "relation": "contains",
       "label": "Включает компонент"
     },
     {
       "source": "o220",
       "target": "b27",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o220",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s67",
       "target": "o188",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o188",
-      "label": "Функциональная область · обобщено"
+      "source": "o188",
+      "target": "s63",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o188",
       "target": "b30",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o188",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
+      "source": "s63",
       "target": "o189",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o189",
-      "label": "Функциональная область · обобщено"
+      "source": "o189",
+      "target": "s64",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "o189",
       "target": "b29",
-      "label": "Относится к предмету данных"
+      "relation": "references",
+      "label": "В реестре операции указаны сведения"
     },
     {
       "source": "b59",
       "target": "o189",
+      "relation": "references",
       "label": "Описывает операцию"
     },
     {
-      "source": "b59",
-      "target": "b23",
-      "label": "Позиция источника · обобщено"
+      "source": "b23",
+      "target": "s20",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b59",
-      "target": "b4",
-      "label": "Позиция источника · обобщено"
+      "source": "b4",
+      "target": "s44",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b59",
-      "target": "b27",
-      "label": "Позиция источника · обобщено"
+      "source": "b27",
+      "target": "s2",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b59",
-      "target": "b29",
-      "label": "Позиция источника · обобщено"
+      "source": "b29",
+      "target": "s24",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b50",
+      "source": "b31",
       "target": "s43",
-      "label": "Функциональная область · обобщено"
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b59",
-      "target": "b26",
-      "label": "Позиция источника · обобщено"
+      "source": "b26",
+      "target": "s44",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b59",
-      "target": "b28",
-      "label": "Позиция источника · обобщено"
+      "source": "b28",
+      "target": "s45",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
-      "source": "b59",
-      "target": "b30",
-      "label": "Позиция источника · обобщено"
+      "source": "b30",
+      "target": "s21",
+      "relation": "stored_in",
+      "label": "Место учёта или хранения по реестру"
     },
     {
       "source": "b55",
       "target": "s46",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s29",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s44",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s42",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s43",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s45",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s27",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s20",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s24",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s21",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s18",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s19",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s2",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s1",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "o1",
       "target": "s24",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s19",
       "target": "o1",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o9",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s27",
       "target": "o9",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o9",
-      "label": "Функциональная область · обобщено"
+      "source": "o2",
+      "target": "s43",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s18",
       "target": "o2",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b50",
-      "target": "o2",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o3",
       "target": "s20",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s19",
       "target": "o3",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o4",
-      "label": "Позиция источника · обобщено"
+      "source": "o4",
+      "target": "s19",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o4",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o5",
       "target": "s20",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s19",
       "target": "o5",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o6",
-      "label": "Позиция источника · обобщено"
+      "source": "o6",
+      "target": "s19",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o6",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o7",
       "target": "s44",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o7",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o8",
-      "label": "Позиция источника · обобщено"
+      "source": "o8",
+      "target": "s42",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s44",
       "target": "o8",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o10",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o10",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o11",
-      "label": "Позиция источника · обобщено"
+      "source": "o11",
+      "target": "s19",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o11",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o12",
+      "target": "s43",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s44",
       "target": "o12",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o12",
-      "label": "Функциональная область · обобщено"
+      "source": "o13",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s18",
       "target": "o13",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b50",
-      "target": "o13",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o14",
       "target": "s1",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s2",
       "target": "o14",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o15",
+      "target": "s44",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s18",
       "target": "o15",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b50",
-      "target": "o15",
-      "label": "Функциональная область · обобщено"
+      "source": "o16",
+      "target": "s42",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s44",
       "target": "o16",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b50",
-      "target": "o16",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o17",
       "target": "s45",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s46",
       "target": "o17",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o18",
       "target": "s44",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o18",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o19",
       "target": "s21",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s19",
       "target": "o19",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o20",
-      "label": "Позиция источника · обобщено"
+      "source": "o20",
+      "target": "s19",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o20",
+      "relation": "calls",
+      "label": "Запрашивает операцию"
+    },
+    {
+      "source": "o21",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s19",
+      "target": "o21",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "b55",
-      "target": "o21",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b50",
-      "target": "o21",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b55",
       "target": "s11",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s4",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s16",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s12",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s5",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s6",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s3",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s8",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s9",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s10",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "o22",
       "target": "s5",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o22",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o23",
       "target": "s45",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s46",
       "target": "o23",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o24",
       "target": "s5",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o24",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o25",
       "target": "s5",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o25",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o26",
       "target": "s44",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o26",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o28",
       "target": "s4",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s9",
       "target": "o28",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o29",
       "target": "s9",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s5",
       "target": "o29",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o30",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o30",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o31",
       "target": "s16",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s6",
       "target": "o31",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o32",
       "target": "s45",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s46",
       "target": "o32",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o33",
       "target": "s44",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o33",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o34",
       "target": "s6",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o34",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o35",
       "target": "s10",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s5",
       "target": "o35",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o36",
       "target": "s44",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o36",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o37",
       "target": "s6",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o37",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o38",
       "target": "s45",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s46",
       "target": "o38",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o39",
       "target": "s8",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s5",
       "target": "o39",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o40",
       "target": "s3",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o40",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o41",
       "target": "s6",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o41",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o42",
       "target": "s11",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s6",
       "target": "o42",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o43",
       "target": "s4",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s8",
       "target": "o43",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o44",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o44",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o45",
       "target": "s1",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o45",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o27",
       "target": "s4",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s10",
       "target": "o27",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "b55",
       "target": "s13",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s34",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s17",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s39",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s41",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s14",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s40",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "o46",
       "target": "s11",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s39",
       "target": "o46",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o55",
       "target": "s41",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s39",
       "target": "o55",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o56",
       "target": "s39",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o56",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o57",
       "target": "s39",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o57",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o47",
       "target": "s11",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s39",
       "target": "o47",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o48",
       "target": "s11",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s39",
       "target": "o48",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o49",
-      "label": "Позиция источника · обобщено"
+      "source": "o49",
+      "target": "s17",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o49",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o50",
       "target": "s40",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s39",
       "target": "o50",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o51",
-      "label": "Позиция источника · обобщено"
+      "source": "o51",
+      "target": "s34",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s40",
       "target": "o51",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o52",
       "target": "s39",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s41",
       "target": "o52",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o53",
       "target": "s16",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s39",
       "target": "o53",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o54",
       "target": "s39",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o54",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o58",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o58",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o59",
-      "label": "Позиция источника · обобщено"
+      "source": "o59",
+      "target": "s34",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s14",
       "target": "o59",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o60",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s18",
       "target": "o60",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o60",
-      "label": "Функциональная область · обобщено"
+      "source": "o61",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s39",
       "target": "o61",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b48",
-      "target": "o61",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b55",
-      "target": "o62",
-      "label": "Позиция источника · обобщено"
+      "source": "o62",
+      "target": "s17",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s2",
       "target": "o62",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o63",
       "target": "s13",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s11",
       "target": "o63",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o64",
-      "label": "Позиция источника · обобщено"
+      "source": "o64",
+      "target": "s17",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o64",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o65",
-      "label": "Позиция источника · обобщено"
+      "source": "o65",
+      "target": "s17",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o65",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o66",
       "target": "s11",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s41",
       "target": "o66",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o67",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o67",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "b40",
-      "label": "Позиция источника · обобщено"
+      "source": "b40",
+      "target": "o79",
+      "relation": "references",
+      "label": "Уточняет функцию операции"
     },
     {
-      "source": "b55",
+      "source": "b40",
       "target": "s30",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Относится к участнику расчётов"
     },
     {
       "source": "b41",
       "target": "o78",
-      "label": "Связан по документу"
+      "relation": "references",
+      "label": "Уточняет функцию операции"
     },
     {
-      "source": "b55",
+      "source": "b41",
       "target": "s32",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Относится к участнику расчётов"
     },
     {
       "source": "b42",
       "target": "o76",
-      "label": "Связан по документу"
+      "relation": "references",
+      "label": "Уточняет функцию операции"
     },
     {
-      "source": "b55",
-      "target": "b42",
-      "label": "Позиция источника · обобщено"
+      "source": "b42",
+      "target": "s32",
+      "relation": "references",
+      "label": "Относится к участнику расчётов"
     },
     {
       "source": "b55",
       "target": "s31",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s33",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
-      "source": "b54",
+      "source": "b55",
       "target": "s30",
-      "label": "Функциональная область · обобщено"
-    },
-    {
-      "source": "b54",
-      "target": "s32",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
-      "target": "o68",
-      "label": "Позиция источника · обобщено"
+      "target": "s32",
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
+    },
+    {
+      "source": "o68",
+      "target": "s34",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s33",
       "target": "o68",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o77",
-      "label": "Позиция источника · обобщено"
+      "source": "o77",
+      "target": "s34",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o77",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o78",
-      "label": "Позиция источника · обобщено"
+      "source": "o78",
+      "target": "s32",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o78",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o79",
+      "target": "s30",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s3",
       "target": "o79",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b54",
-      "target": "o79",
-      "label": "Функциональная область · обобщено"
+      "source": "o80",
+      "target": "s31",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s30",
       "target": "o80",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b54",
-      "target": "o80",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o69",
       "target": "s33",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s32",
       "target": "o69",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o70",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o70",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o71",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o71",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o72",
       "target": "s3",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o72",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o73",
-      "label": "Позиция источника · обобщено"
+      "source": "o73",
+      "target": "s33",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b54",
+      "source": "s32",
       "target": "o73",
-      "label": "Функциональная область · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o74",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o74",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o75",
       "target": "s1",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o75",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o76",
-      "label": "Позиция источника · обобщено"
+      "source": "o76",
+      "target": "s32",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o76",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o81",
       "target": "s45",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s46",
       "target": "o81",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o88",
       "target": "s6",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o88",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o89",
       "target": "s3",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o89",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o90",
       "target": "s13",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s11",
       "target": "o90",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o91",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s1",
       "target": "o91",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o82",
       "target": "s44",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o82",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o83",
-      "label": "Позиция источника · обобщено"
+      "source": "o83",
+      "target": "s42",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s44",
       "target": "o83",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o84",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o84",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o85",
       "target": "s2",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o85",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o86",
       "target": "s11",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s6",
       "target": "o86",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o87",
       "target": "s6",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o87",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o92",
       "target": "s1",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s3",
       "target": "o92",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "b55",
       "target": "s38",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s28",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s47",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s7",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s37",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s35",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s25",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s36",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s26",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s22",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s23",
+      "relation": "references",
       "label": "Перечисляет в архитектуре"
     },
     {
       "source": "b55",
       "target": "s15",
-      "label": "Позиция источника · обобщено"
+      "relation": "references",
+      "label": "Перечисляет в архитектуре"
     },
     {
       "source": "o93",
       "target": "s18",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s23",
       "target": "o93",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o102",
-      "label": "Позиция источника · обобщено"
+      "source": "o102",
+      "target": "s35",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s7",
       "target": "o102",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o103",
       "target": "s18",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s26",
       "target": "o103",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o104",
+      "target": "s37",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s19",
       "target": "o104",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o104",
-      "label": "Позиция источника · обобщено"
+      "source": "o105",
+      "target": "s19",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s18",
       "target": "o105",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o105",
-      "label": "Позиция источника · обобщено"
+      "source": "o94",
+      "target": "s38",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s18",
       "target": "o94",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o94",
-      "label": "Позиция источника · обобщено"
+      "source": "o95",
+      "target": "s35",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s36",
       "target": "o95",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o95",
-      "label": "Позиция источника · обобщено"
+      "source": "o96",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s27",
       "target": "o96",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o96",
-      "label": "Позиция источника · обобщено"
+      "source": "o97",
+      "target": "s25",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s18",
       "target": "o97",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o97",
-      "label": "Позиция источника · обобщено"
+      "source": "o98",
+      "target": "s35",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s18",
       "target": "o98",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b55",
-      "target": "o98",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o99",
       "target": "s47",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o99",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
       "source": "o100",
       "target": "s24",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s19",
       "target": "o100",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o101",
-      "label": "Позиция источника · обобщено"
+      "source": "o101",
+      "target": "s19",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s18",
       "target": "o101",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o106",
+      "target": "s22",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s18",
       "target": "o106",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o106",
-      "label": "Позиция источника · обобщено"
+      "source": "o107",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s18",
       "target": "o107",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b55",
-      "target": "o107",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "o108",
       "target": "s26",
-      "label": "Исполняется участником"
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
       "source": "s28",
       "target": "o108",
+      "relation": "calls",
       "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
+      "source": "o109",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
+    },
+    {
+      "source": "s37",
       "target": "o109",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
-      "source": "b55",
-      "target": "o109",
-      "label": "Позиция источника · обобщено"
+      "source": "o110",
+      "target": "s29",
+      "relation": "calls",
+      "label": "Предоставляется участником"
     },
     {
-      "source": "b55",
+      "source": "s19",
       "target": "o110",
-      "label": "Позиция источника · обобщено"
-    },
-    {
-      "source": "b55",
-      "target": "o110",
-      "label": "Позиция источника · обобщено"
+      "relation": "calls",
+      "label": "Запрашивает операцию"
     },
     {
       "source": "b50",
       "target": "s44",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s11",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s13",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s28",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s37",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s39",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s18",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s19",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s25",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s26",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s22",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Указывает участника процесса"
     },
     {
       "source": "b50",
       "target": "s23",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b51",
       "target": "s44",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b51",
       "target": "s45",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b51",
       "target": "s21",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b51",
       "target": "s18",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b51",
       "target": "s19",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Указывает участника процесса"
     },
     {
       "source": "b51",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b51",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b43",
       "target": "b51",
+      "relation": "references",
       "label": "Оформляется в процессе"
     },
     {
       "source": "b52",
       "target": "s44",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s45",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s20",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s24",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s21",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s18",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s19",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b52",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b44",
       "target": "b52",
+      "relation": "references",
       "label": "Оформляется в процессе"
     },
     {
       "source": "b53",
       "target": "s44",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b53",
       "target": "s45",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b53",
       "target": "s20",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b53",
       "target": "s21",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b53",
       "target": "s18",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b53",
       "target": "s19",
-      "label": "Функциональная область · обобщено"
+      "relation": "references",
+      "label": "Указывает участника процесса"
     },
     {
       "source": "b53",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b53",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b45",
       "target": "b53",
+      "relation": "references",
       "label": "Оформляется в процессе"
     },
     {
       "source": "b46",
       "target": "s44",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s11",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s45",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s4",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s16",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s5",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s6",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s3",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b46",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s11",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s4",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s16",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s5",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s6",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s3",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b47",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s11",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s13",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s16",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s39",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s18",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s41",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s14",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b48",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b54",
       "target": "s31",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b54",
       "target": "s33",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b54",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b54",
       "target": "s3",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b54",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s44",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s11",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s45",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s13",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s2",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s6",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s3",
+      "relation": "references",
       "label": "Указывает участника процесса"
     },
     {
       "source": "b49",
       "target": "s1",
+      "relation": "references",
       "label": "Указывает участника процесса"
     }
   ]

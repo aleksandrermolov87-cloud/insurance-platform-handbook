@@ -12,6 +12,7 @@
     "@alfalab/core-components": "50.43.2",
     "@alfalab/icons-glyph": "2.296.0",
     "@alfalab/icons-logotype": "2.38.0",
+    "@dagrejs/dagre": "3.1.4",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },

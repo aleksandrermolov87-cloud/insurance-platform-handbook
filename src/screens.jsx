@@ -58,7 +58,7 @@ function Zoom({ screen, close }) {
     </dialog>
   );
 }
-export function Screens({ channel = "sfa", id }) {
+export function Screens({ channel = "sfa", id, allFrames = false }) {
   const [q, sq] = useState(""),
     [stage, ss] = useState(""),
     [zoom, sz] = useState(false);
@@ -79,15 +79,28 @@ export function Screens({ channel = "sfa", id }) {
       stage: variant.section,
       caption: variant.reason,
       nodeId: variant.node,
-      width: variant.imageWidth,
-      height: variant.imageHeight,
+      width: variant.imageWidth || variant.width,
+      height: variant.imageHeight || variant.height,
     });
   if (item) {
-    const ix = all.indexOf(item);
+    const full = allFrames || Boolean(variant);
+    const sequence = full
+      ? frameIndex.filter((f) => f.channel === channel)
+      : all;
+    const ix = sequence.findIndex((f) => f.id === item.id);
+    const frameLink = (offset) =>
+      "#/screens/" +
+      channel +
+      "/" +
+      sequence[ix + offset].id +
+      (full ? "?view=all" : "");
     return (
       <>
-        <a className="backlink" href={"#/screens/" + channel}>
-          Все экраны {channelName[channel]}
+        <a
+          className="backlink"
+          href={(full ? "#/frames/" : "#/screens/") + channel}
+        >
+          {full ? "Полная галерея" : "Атлас"} {channelName[channel]}
         </a>
         <Title
           context={`${channelName[channel]} · ${item.stage}`}
@@ -134,16 +147,13 @@ export function Screens({ channel = "sfa", id }) {
             2026
           </p>
         </div>
+        <p className="count">
+          Экран {ix + 1} из {sequence.length}
+        </p>
         <div className="buttons pager">
-          {ix > 0 && (
-            <Action href={"#/screens/" + channel + "/" + all[ix - 1].id}>
-              Предыдущий экран
-            </Action>
-          )}
-          {ix >= 0 && ix + 1 < all.length && (
-            <Action href={"#/screens/" + channel + "/" + all[ix + 1].id}>
-              Следующий экран
-            </Action>
+          {ix > 0 && <Action href={frameLink(-1)}>Предыдущий экран</Action>}
+          {ix >= 0 && ix + 1 < sequence.length && (
+            <Action href={frameLink(1)}>Следующий экран</Action>
           )}
         </div>
         {zoom && <Zoom screen={item} close={() => sz(false)} />}
@@ -169,11 +179,9 @@ export function Screens({ channel = "sfa", id }) {
         </a>
       </div>
       <div className="buttons">
-        <Action primary href={"#/journey/" + channel}>
-          Оформление ДМС по шагам
-        </Action>
-        <Action href={"#/frames/" + channel}>
-          Все фреймы в Figma ·{" "}
+        <Action href={"#/journey/" + channel}>Оформление ДМС по шагам</Action>
+        <Action primary href={"#/frames/" + channel}>
+          Все экраны на сайте ·{" "}
           {frameIndex.filter((f) => f.channel === channel).length}
         </Action>
         <Action
@@ -257,12 +265,12 @@ export function FrameIndex({ channel, initial }) {
         Атлас {channelName[channel]}
       </a>
       <Title
-        context="Указатель Figma"
+        context="Атлас интерфейсов"
         title={"Все фреймы " + channelName[channel]}
       >
-        Для каждого узла указаны раздел и ссылка на исходный фрейм. Варианты
-        компоновки, адаптивы и компоненты перечислены отдельно от
-        иллюстрированного пути.
+        Все экраны из разделов с пройденным дизайн-чеком доступны на сайте.
+        Выберите экран, чтобы рассмотреть его крупнее или перейти к следующему
+        варианту.
       </Title>
       <Filter
         value={query}
@@ -284,31 +292,17 @@ export function FrameIndex({ channel, initial }) {
       <div className="frame-index">
         {shown.map((f) => (
           <div key={f.id}>
-            <div>
-              <small>
-                {f.section} · {f.role}
-              </small>
+            <a
+              className="frame-tile"
+              href={"#/screens/" + channel + "/" + f.id + "?view=all"}
+            >
+              <div className="frame-thumbnail">
+                <img loading="lazy" decoding="async" src={f.src} alt="" />
+              </div>
+              <small>{f.section}</small>
               <h3>{f.title}</h3>
-              <p>{f.reason}</p>
-            </div>
-            <div>
-              {f.illustrated ? (
-                <a href={"#/screens/" + channel + "/" + f.id}>
-                  Карточка экрана
-                </a>
-              ) : f.src ? (
-                <a
-                  href={"#/screens/" + channel + "/" + f.id}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Изображение
-                </a>
-              ) : null}
-              <a href={f.url} target="_blank" rel="noreferrer">
-                Figma · {f.node}
-              </a>
-            </div>
+            </a>
+            <span className="frame-origin">{f.node}</span>
           </div>
         ))}
       </div>

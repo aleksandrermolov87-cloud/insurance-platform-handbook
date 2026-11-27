@@ -97,19 +97,14 @@
   "fullMap": {
     "nodes": 389,
     "edges": 901,
-    "direct": 417,
-    "generalized": 484,
-    "uniquePairs": 757,
+    "direct": 901,
+    "generalized": 0,
+    "uniquePairs": 901,
     "isolated": 1,
     "componentSizes": [
       388,
       1
     ],
-    "generalizedByRelation": {
-      "calls": 293,
-      "references": 115,
-      "contains": 39,
-      "stored_in": 37
-    }
+    "restoredFromPrior": 484
   }
 }

@@ -15,7 +15,7 @@ import { Article, Articles, Catalog, Search } from "./library";
 import { Protection, Requirements } from "./requirements";
 import { Screens, FrameIndex, Journey } from "./screens";
 import { SourceGuide } from "./sources";
-import counts from "./data/screens.json";
+import counts from "./data/screen-index.json";
 import "@alfalab/core-components/vars/bundle/corp.css";
 import "@alfalab/core-components/themes/corp.css";
 import "./style.css";
@@ -154,8 +154,8 @@ function Home() {
               <span>{t}</span>
               <h3>{d}</h3>
               <p>
-                Дизайн-чек пройден ·{" "}
-                {counts.filter((x) => x.channel === k).length} экранов
+                Экранов с пройденным дизайн-чеком ·{" "}
+                {counts.filter((x) => x.channel === k).length}
               </p>
             </a>
           ))}
@@ -214,7 +214,7 @@ function App() {
     nav
       .flatMap((n) => n[1])
       .find((n) => r.path === n[0] || r.path.startsWith(n[0] + "/"))?.[1] ||
-    { article: "Материал", search: "Поиск", frames: "Указатель Figma" }[key] ||
+    { article: "Материал", search: "Поиск", frames: "Галерея экранов" }[key] ||
     "Обзор";
   let page;
   switch (key) {
@@ -254,7 +254,9 @@ function App() {
       page = <FrameIndex channel={a} initial={b} />;
       break;
     case "screens":
-      page = <Screens channel={a} id={b} />;
+      page = (
+        <Screens channel={a} id={b} allFrames={r.query.get("view") === "all"} />
+      );
       break;
     case "product":
       page = <Protection />;

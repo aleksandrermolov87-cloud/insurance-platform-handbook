@@ -18,6 +18,7 @@ import {
   matches,
   searchable,
 } from "./shared";
+import { ArticleDiagram, Neighbourhood } from "./diagrams";
 export const library = [
   ...space.map((a, i) => ({
     ...a,
@@ -119,6 +120,7 @@ export function Article({ id }) {
       <Title context={a.area} title={a.title}>
         {a.summary}
       </Title>
+      <ArticleDiagram id={id} />
       <div className="article-body">
         {a.sections.map((s, i) => (
           <section key={i}>
@@ -163,6 +165,7 @@ export function Catalog({ kind, id }) {
         <Title context={record[typeKey]} title={record.title}>
           {record.summary}
         </Title>
+        {node && <Neighbourhood node={node} />}
         <dl className="facts">
           <div>
             <dt>Источник</dt>
@@ -241,8 +244,8 @@ const searchData = [
     .filter((s) => !s.illustrated)
     .map((s) => [
       s.title,
-      "Указатель Figma · " + s.section,
-      "frames/" + s.channel + "/" + s.node,
+      "Галерея экранов · " + s.section,
+      "screens/" + s.channel + "/" + s.id + "?view=all",
       searchable(s),
     ]),
   ...library.map((a) => [a.title, a.area, "article/" + a.id, searchable(a)]),
