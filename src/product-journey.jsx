@@ -98,8 +98,12 @@ const decisions = {
   },
 };
 
+function decisionFor(stageId, channel) {
+  const decision = decisions[stageId];
+  return decision?.channel && decision.channel !== channel ? null : decision;
+}
+
 function Decision({ decision, channel, select }) {
-  const branchChannel = decision.channel || channel;
   return (
     <section
       className={"map-decision decision-" + decision.id}
@@ -126,9 +130,9 @@ function Decision({ decision, channel, select }) {
             </div>
             <ScreenLinks
               id={path.id}
-              channel={branchChannel}
+              channel={channel}
               onMap
-              onOpen={(id) => select(id, branchChannel, true)}
+              onOpen={(id) => select(id, channel, true)}
             />
           </li>
         ))}
@@ -166,7 +170,7 @@ function useConnections(container, channel) {
       }
       boxes.slice(1).forEach((b, i) => {
         const a = boxes[i];
-        if (compact && decisions[stages[i].id]) {
+        if (compact && decisionFor(stages[i].id, channel)) {
           const rail = a.left - 9;
           add(stages[i].id, [
             [a.left, a.y],
@@ -175,9 +179,10 @@ function useConnections(container, channel) {
             [b.left - 2, b.y],
           ]);
         } else if (Math.abs(a.y - b.y) < 2) {
+          const forward = b.x > a.x;
           add(stages[i].id, [
-            [a.right, a.y],
-            [b.left - 2, b.y],
+            [forward ? a.right : a.left, a.y],
+            [forward ? b.left - 2 : b.right + 2, b.y],
           ]);
         } else {
           add(stages[i].id, [
@@ -188,7 +193,6 @@ function useConnections(container, channel) {
       });
       const address = bounds(board.querySelector('[data-decision="address"]'));
       const skip = bounds(board.querySelector('[data-decision="skip"]'));
-      const paper = bounds(board.querySelector('[data-decision="paper"]'));
       function branchIn(id, a, b) {
         if (compact) {
           add(
@@ -271,8 +275,12 @@ function useConnections(container, channel) {
       }
       branchIn("data-skip", boxes[2], skip);
       branchOut("skip-checkout", skip, boxes[4]);
-      branchIn("checkout-paper", boxes[4], paper);
-      branchOut("paper-payment", paper, boxes[6]);
+      const paperNode = board.querySelector('[data-decision="paper"]');
+      if (paperNode) {
+        const paper = bounds(paperNode);
+        branchIn("checkout-paper", boxes[4], paper);
+        branchOut("paper-payment", paper, boxes[6]);
+      }
       setLines(paths);
     };
     const obs = new ResizeObserver(update);
@@ -343,9 +351,8 @@ function Branches({ stage, channel, selected, onOpen }) {
 }
 
 export function ProductJourney({ initialStep, initialChannel, onMap }) {
-  const [selection, setSelection] = useState(() =>
-    readSelection(initialStep, initialChannel),
-  );
+  const initial = readSelection(initialStep, initialChannel);
+  const [selection, setSelection] = useState(initial);
   const [all, setAll] = useState(false);
   const { id, channel } = selection;
   const active = stageFor.get(id);
@@ -371,19 +378,26 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
   }
   useLayoutEffect(() => {
     if (!initialStep) return;
+    if (initial.id !== initialStep) {
+      history.replaceState(
+        history.state,
+        "",
+        productLink(initial.id, initial.channel, onMap),
+      );
+    }
     const mapTarget =
       onMap &&
       [...board.current.querySelectorAll("[data-map-screen]")].find(
-        (node) => node.dataset.mapScreen === initialStep,
+        (node) => node.dataset.mapScreen === initial.id,
       );
     const target =
       mapTarget ||
-      (stageFor.get(initialStep)?.id === initialStep
-        ? board.current?.querySelector('[data-stage="' + initialStep + '"]')
-        : document.getElementById("case-" + initialStep));
+      (stageFor.get(initial.id)?.id === initial.id
+        ? board.current?.querySelector('[data-stage="' + initial.id + '"]')
+        : document.getElementById("case-" + initial.id));
     if (mapTarget) mapTarget.focus({ preventScroll: true });
     target?.scrollIntoView({ block: "start" });
-  }, [initialStep, onMap]);
+  }, [initialStep, initial.id, initial.channel, onMap]);
   const selectedGroups = all ? stages : [active];
   return (
     <figure className="product-journey" aria-labelledby="product-journey-title">
@@ -415,7 +429,7 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
           ))}
         </div>
       </figcaption>
-      <div className="product-map-board" ref={board}>
+      <div className="product-map-board" data-channel={channel} ref={board}>
         <svg aria-hidden="true" className="product-map-lines">
           <defs>
             <marker
@@ -446,7 +460,7 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
           ))}
         </svg>
         {stages.map((stage, i) => {
-          const decision = decisions[stage.id];
+          const decision = decisionFor(stage.id, channel);
           return (
             <React.Fragment key={stage.id}>
               <div

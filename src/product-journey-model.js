@@ -130,10 +130,10 @@ export function readSelection(id, channel) {
   const screen = screens.get(id) || screens.get("entry");
   const chosenChannel = validChannel(channel);
   return {
-    id: screen.id,
-    channel: screen.channels.includes(chosenChannel)
-      ? chosenChannel
-      : screen.channels[0],
+    id: screen.channels.includes(chosenChannel)
+      ? screen.id
+      : stageFor.get(screen.id).id,
+    channel: chosenChannel,
   };
 }
 export function productLink(id, channel, onMap = false) {
