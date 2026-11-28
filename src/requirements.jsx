@@ -10,7 +10,7 @@ import {
   proto,
 } from "./shared";
 import { ProductJourney } from "./product-journey";
-import { productLink, screens, validChannel } from "./product-journey-model";
+import { productLink, screenFor, validChannel } from "./product-journey-model";
 function crosslinks(text) {
   return text.split(/(стр\.\s*\d+(?:[–-]\d+)?)/g).map((part, i) => {
     const m = part.match(/^стр\.\s*(\d+)/);
@@ -159,16 +159,13 @@ const updateClauses = [
   ],
 ];
 function RequirementReturn({ query }) {
-  const screen = screens.get(query.get("from"));
+  const channel = validChannel(query.get("channel"));
+  const screen = screenFor(query.get("from"), channel);
   return (
     screen && (
       <a
         className="backlink requirement-return"
-        href={productLink(
-          screen.id,
-          validChannel(query.get("channel")),
-          query.get("view") === "map",
-        )}
+        href={productLink(screen.id, channel, query.get("view") === "map")}
       >
         К схеме · {screen.title}
       </a>

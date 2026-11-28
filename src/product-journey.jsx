@@ -6,14 +6,15 @@ import {
   prototypeLink,
   readSelection,
   requirementLink,
-  screens,
+  screenFor,
   stageFor,
+  stageForChannel,
   stages,
 } from "./product-journey-model";
 import "./product-journey.css";
 
 function ScreenLinks({ id, channel, onOpen, detailed = false, onMap = false }) {
-  const screen = screens.get(id),
+  const screen = screenFor(id, channel),
     primary = primaryFor(screen, channel);
   return (
     <div className="journey-links">
@@ -294,13 +295,13 @@ function useConnections(container, channel) {
 }
 
 function Branches({ stage, channel, selected, onOpen }) {
-  const options = [stage.id, ...stage.variants].filter((id) =>
-    forChannel(id, channel),
-  );
+  const options = [
+    ...new Set([stage.screenId, stage.id, ...stage.variants]),
+  ].filter((id) => forChannel(id, channel));
   return (
     <div className="journey-cases">
       {options.map((id) => {
-        const screen = screens.get(id);
+        const screen = screenFor(id, channel);
         const primary = primaryFor(screen, channel);
         const secondary = screen.secondary.filter(
           (ref) =>
@@ -355,7 +356,10 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
   const [selection, setSelection] = useState(initial);
   const [all, setAll] = useState(false);
   const { id, channel } = selection;
-  const active = stageFor.get(id);
+  const channelStages = stages.map((stage) => stageForChannel(stage, channel));
+  const active = channelStages.find(
+    (stage) => stage.id === stageFor.get(id).id,
+  );
   const board = useRef(null),
     details = useRef(null);
   const marker = "journey-line-" + useId().replace(/[^a-zA-Z0-9_-]/g, "");
@@ -369,7 +373,7 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
     );
   }
   function showStage(stage) {
-    select(stage.id);
+    select(stage.screenId);
     setAll(false);
     requestAnimationFrame(() => {
       details.current?.querySelector("h3")?.focus({ preventScroll: true });
@@ -385,20 +389,30 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
         productLink(initial.id, initial.channel, onMap),
       );
     }
+    const startStage = stageFor.get(initial.id);
+    const stageNode = board.current.querySelector(
+      '[data-stage="' + startStage.id + '"]',
+    );
     const mapTarget =
       onMap &&
-      [...board.current.querySelectorAll("[data-map-screen]")].find(
+      ([...board.current.querySelectorAll("[data-map-screen]")].find(
         (node) => node.dataset.mapScreen === initial.id,
-      );
+      ) ||
+        stageNode?.querySelector(".select-stop"));
     const target =
       mapTarget ||
-      (stageFor.get(initial.id)?.id === initial.id
-        ? board.current?.querySelector('[data-stage="' + initial.id + '"]')
+      (startStage.id === initial.id
+        ? stageNode
         : document.getElementById("case-" + initial.id));
     if (mapTarget) mapTarget.focus({ preventScroll: true });
     target?.scrollIntoView({ block: "start" });
   }, [initialStep, initial.id, initial.channel, onMap]);
-  const selectedGroups = all ? stages : [active];
+  function switchChannel(nextChannel) {
+    const nextStage = stageForChannel(stageFor.get(id), nextChannel);
+    const keepVariant = id !== active.screenId && forChannel(id, nextChannel);
+    select(keepVariant ? id : nextStage.screenId, nextChannel);
+  }
+  const selectedGroups = all ? channelStages : [active];
   return (
     <figure className="product-journey" aria-labelledby="product-journey-title">
       <figcaption className="product-map-heading">
@@ -422,7 +436,7 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
               type="button"
               key={key}
               aria-pressed={channel === key}
-              onClick={() => select(forChannel(id, key) ? id : active.id, key)}
+              onClick={() => switchChannel(key)}
             >
               {title}
             </button>
@@ -459,7 +473,7 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
             />
           ))}
         </svg>
-        {stages.map((stage, i) => {
+        {channelStages.map((stage, i) => {
           const decision = decisionFor(stage.id, channel);
           return (
             <React.Fragment key={stage.id}>
@@ -480,15 +494,14 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
                   <span className="stop-number">{i + 1}</span>
                   <span>{stage.title}</span>
                 </button>
-                <p>
-                  {channel === "nib" && stage.id === "done"
-                    ? "Дата начала защиты и документ клиента."
-                    : stage.note}
-                </p>
+                <p>{stage.note}</p>
                 <ScreenLinks
-                  id={stage.id}
+                  id={stage.screenId}
                   channel={channel}
-                  onOpen={(next) => select(next)}
+                  onMap={Boolean(stage.screenByChannel)}
+                  onOpen={(next) =>
+                    select(next, channel, Boolean(stage.screenByChannel))
+                  }
                 />
               </div>
               {decision && (
@@ -535,7 +548,7 @@ export function ProductJourney({ initialStep, initialChannel, onMap }) {
           <section className="journey-case-group" key={group.id}>
             {all && (
               <h4 className="case-group-title">
-                {stages.indexOf(group) + 1}. {group.title}
+                {channelStages.indexOf(group) + 1}. {group.title}
               </h4>
             )}
             <Branches

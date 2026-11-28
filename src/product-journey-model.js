@@ -4,8 +4,7 @@ import { proto } from "./shared";
 export const stages = [
   {
     id: "entry",
-    title: "Выбор продукта",
-    note: "Витрина НИБ или предложение в SFA.",
+    screenByChannel: { nib: "entry", sfa: "entry" },
     variants: ["draft", "version-changed"],
   },
   {
@@ -109,8 +108,7 @@ export const stages = [
   },
   {
     id: "done",
-    title: "Готовый полис",
-    note: "Документ клиенту и данные для сверки в SFA.",
+    screenByChannel: { nib: "done", sfa: "reconciliation" },
     variants: ["policy-issued", "reconciliation"],
   },
 ];
@@ -120,6 +118,17 @@ export const stageFor = new Map(
     [stage.id, ...stage.variants].map((id) => [id, stage]),
   ),
 );
+export function screenFor(id, channel) {
+  const screen = screens.get(id);
+  const overrides = screen?.byChannel?.[channel];
+  return overrides ? { ...screen, ...overrides } : screen;
+}
+export function stageForChannel(stage, channel) {
+  const screenId = stage.screenByChannel?.[channel];
+  if (!screenId) return { ...stage, screenId: stage.id };
+  const screen = screenFor(screenId, channel);
+  return { ...stage, screenId, title: screen.title, note: screen.observed };
+}
 export function validChannel(value) {
   return value === "sfa" ? "sfa" : "nib";
 }
