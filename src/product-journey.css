@@ -326,7 +326,8 @@
   }
 }
 
-.product-stop {
+.product-stop,
+.select-stop {
   scroll-margin-top: 85px;
 }
 .state-nav {
