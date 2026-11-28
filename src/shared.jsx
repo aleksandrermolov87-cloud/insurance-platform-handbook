@@ -41,8 +41,8 @@ export function Filter({ value, change, label }) {
 export function Title({ context, title, children }) {
   return (
     <header className="page-intro">
-      <span className="eyebrow">{context}</span>
       <h1>{title}</h1>
+      {context && <span className="intro-context">{context}</span>}
       {children && <p>{children}</p>}
     </header>
   );

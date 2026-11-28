@@ -50,10 +50,13 @@ function draw(canvas, angles, zoom, selected, group, data) {
   const w = parent.clientWidth,
     h = parent.clientHeight,
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-  canvas.width = w * dpr;
-  canvas.height = h * dpr;
+  const pixelWidth = Math.round(w * dpr);
+  const pixelHeight = Math.round(h * dpr);
+  if (canvas.width !== pixelWidth) canvas.width = pixelWidth;
+  if (canvas.height !== pixelHeight) canvas.height = pixelHeight;
   const ctx = canvas.getContext("2d");
-  ctx.scale(dpr, dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, w, h);
   const scale = Math.min(w / 4.15, h / 3.2) * zoom;
   const [ax, ay] = angles;
   const visible = nodes.filter((n) => !group || n.group === group);
@@ -151,9 +154,9 @@ export function Graph({ mode, initialNode }) {
   const canvas = useRef(null),
     camera = useRef([0.05, -0.16]),
     pointer = useRef(null),
-    hit = useRef(new Map());
-  const [angleVersion, refresh] = useState(0),
-    [zoom, sz] = useState(1),
+    hit = useRef(new Map()),
+    requestDraw = useRef(null);
+  const [zoom, sz] = useState(1),
     [group, sg] = useState(""),
     [selected, ss] = useState(
       nodes.some((n) => n.id === initialNode)
@@ -173,14 +176,24 @@ export function Graph({ mode, initialNode }) {
   );
   useEffect(() => {
     const el = canvas.current;
+    let frame = null;
     const render = () => {
+      frame = null;
       hit.current = draw(el, camera.current, zoom, selected, group, displayed);
     };
-    const obs = new ResizeObserver(render);
+    function schedule() {
+      if (frame === null) frame = requestAnimationFrame(render);
+    }
+    requestDraw.current = schedule;
+    const obs = new ResizeObserver(schedule);
     obs.observe(el.parentElement);
     render();
-    return () => obs.disconnect();
-  }, [zoom, selected, group, angleVersion, displayed]);
+    return () => {
+      obs.disconnect();
+      if (frame !== null) cancelAnimationFrame(frame);
+      requestDraw.current = null;
+    };
+  }, [zoom, selected, group, displayed]);
   function down(e) {
     e.currentTarget.setPointerCapture(e.pointerId);
     pointer.current = {
@@ -198,7 +211,7 @@ export function Graph({ mode, initialNode }) {
     if (Math.abs(dx) + Math.abs(dy) > 4) {
       p.moved = true;
       camera.current = [p.initial[0] + dx / 135, p.initial[1] + dy / 150];
-      refresh((x) => x + 1);
+      requestDraw.current?.();
     }
   }
   function up(e) {
@@ -310,7 +323,7 @@ export function Graph({ mode, initialNode }) {
             onClick={() => {
               camera.current = [0.05, -0.16];
               sz(1);
-              refresh((x) => x + 1);
+              requestDraw.current?.();
             }}
           >
             Сбросить вид

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
+import { nav } from "./navigation";
 import model from "./data/model.json";
 import space from "./data/space.json";
 import pages from "./data/pages.json";
@@ -16,6 +17,7 @@ import {
   Empty,
   Sources,
   matches,
+  norm,
   searchable,
 } from "./shared";
 import {
@@ -166,14 +168,16 @@ export function Catalog({ kind, id, step }) {
   };
   const typeKey = system ? "kind" : "status";
   const types = [...new Set(original.map((o) => o[typeKey]))];
-  const rows = original
-    .map((o, i) => ({ ...o, id: i }))
-    .filter(
-      (o) =>
-        (!pickedGroup || pickedGroup.indices.has(o.id)) &&
-        (!type || o[typeKey] === type) &&
-        matches(searchable(o), q),
-    );
+  const indexedRows = useMemo(
+    () => original.map((o, id) => ({ ...o, id, searchText: searchable(o) })),
+    [original],
+  );
+  const rows = indexedRows.filter(
+    (o) =>
+      (!pickedGroup || pickedGroup.indices.has(o.id)) &&
+      (!type || o[typeKey] === type) &&
+      matches(o.searchText, q),
+  );
   const record = id !== undefined ? original[Number(id)] : null;
   const node =
     record &&
@@ -288,11 +292,19 @@ export function Catalog({ kind, id, step }) {
   );
 }
 const searchData = [
+  ...nav.flatMap(([group, items]) =>
+    items.map(([path, title]) => [
+      title,
+      group,
+      path,
+      norm(title + (path === "product" ? " КЗБ" : "")),
+    ]),
+  ),
   ...frameIndex
     .filter((s) => !s.illustrated)
     .map((s) => [
       s.title,
-      "Галерея экранов · " + s.section,
+      (s.channel === "sfa" ? "SFA" : "НИБ") + " · " + s.section,
       "screens/" + s.channel + "/" + s.id + "?view=all",
       searchable(s),
     ]),
@@ -318,8 +330,22 @@ const searchData = [
     searchable(s),
   ]),
 ];
+export function searchHandbook(term) {
+  const words = norm(term).split(" ").filter(Boolean);
+  if (!words.length) return [];
+  const titleHits = [],
+    bodyHits = [];
+  for (const item of searchData) {
+    if (!words.every((word) => item[3].includes(word))) continue;
+    const title = norm(item[0]);
+    (words.every((word) => title.includes(word)) ? titleHits : bodyHits).push(
+      item,
+    );
+  }
+  return titleHits.concat(bodyHits);
+}
 export function Search({ term }) {
-  const results = term ? searchData.filter((r) => matches(r[3], term)) : [];
+  const results = searchHandbook(term);
   return (
     <>
       <Title context="Справочник" title="Поиск по платформе">

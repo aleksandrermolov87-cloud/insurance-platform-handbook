@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { AlfaBankLogoMIcon } from "@alfalab/icons-logotype/AlfaBankLogoMIcon";
-import { BookMIcon } from "@alfalab/icons-glyph/BookMIcon";
-import { ArrowsForkMIcon } from "@alfalab/icons-glyph/ArrowsForkMIcon";
-import { ListBulletedMIcon } from "@alfalab/icons-glyph/ListBulletedMIcon";
-import { DocumentLinesMIcon } from "@alfalab/icons-glyph/DocumentLinesMIcon";
-import { WindowLandscapeMIcon } from "@alfalab/icons-glyph/WindowLandscapeMIcon";
+import { DesktopMIcon } from "@alfalab/icons-glyph/DesktopMIcon";
+import { MobilePhoneMIcon } from "@alfalab/icons-glyph/MobilePhoneMIcon";
 import { ShieldMIcon } from "@alfalab/icons-glyph/ShieldMIcon";
-import { MagnifierMIcon } from "@alfalab/icons-glyph/MagnifierMIcon";
+import { ListMIcon } from "@alfalab/icons-glyph/ListMIcon";
+import { CrossMIcon } from "@alfalab/icons-glyph/CrossMIcon";
+import { ChevronRightMIcon } from "@alfalab/icons-glyph/ChevronRightMIcon";
+import { nav, Navigation } from "./navigation";
+import { HandbookSearch } from "./handbook-search";
 import { Typography } from "@alfalab/core-components/typography/modern";
-import { Action, Title, github, spaceUrl } from "./shared";
+import { Action, Title, spaceUrl } from "./shared";
 import { Graph } from "./graph";
 import { Article, Articles, Catalog, Search } from "./library";
 import { Protection, Requirements } from "./requirements";
@@ -19,36 +20,6 @@ import counts from "./data/screen-index.json";
 import "@alfalab/core-components/vars/bundle/corp.css";
 import "@alfalab/core-components/themes/corp.css";
 import "./style.css";
-const nav = [
-  [
-    "Справочник",
-    [
-      ["home", "Обзор", BookMIcon],
-      ["architecture", "Архитектура", ArrowsForkMIcon],
-      ["graph", "3D-карта", ArrowsForkMIcon],
-      ["systems", "Системы и компоненты", ListBulletedMIcon],
-      ["operations", "Реестр операций", ListBulletedMIcon],
-      ["subjects", "Данные и процессы", DocumentLinesMIcon],
-      ["modules", "Функциональные модули", DocumentLinesMIcon],
-      ["space", "Пространство", BookMIcon],
-    ],
-  ],
-  [
-    "Атлас интерфейсов",
-    [
-      ["screens/sfa", "Рабочее место SFA", WindowLandscapeMIcon],
-      ["screens/nib", "Интернет-банк НИБ", WindowLandscapeMIcon],
-    ],
-  ],
-  [
-    "Страховой продукт",
-    [
-      ["product", "Комплексная защита бизнеса", ShieldMIcon],
-      ["requirements", "Требования v1.5", DocumentLinesMIcon],
-    ],
-  ],
-  ["Документация", [["sources", "Источники и версии", BookMIcon]]],
-];
 function MapPreview() {
   return (
     <div className="map-preview" aria-label="Схема каналов и функций">
@@ -56,11 +27,17 @@ function MapPreview() {
       <div className="diagram">
         <div className="map-duo">
           <a href="#/screens/sfa">
-            <b>SFA</b>
+            <b>
+              <DesktopMIcon width={18} height={18} aria-hidden="true" />
+              SFA
+            </b>
             <span>Менеджер</span>
           </a>
           <a href="#/screens/nib">
-            <b>НИБ</b>
+            <b>
+              <MobilePhoneMIcon width={18} height={18} aria-hidden="true" />
+              НИБ
+            </b>
             <span>Клиент</span>
           </a>
         </div>
@@ -84,7 +61,6 @@ function Home() {
     <>
       <section className="hero">
         <div className="hero-copy">
-          <span className="eyebrow">Справочник платформы</span>
           <h1>
             Страхование
             <br />
@@ -100,16 +76,14 @@ function Home() {
             </Action>
             <Action href="#/graph">Открыть 3D-карту</Action>
           </div>
+          <p className="home-meta">
+            Срез справочника <time dateTime="2026-11-27">27 ноября 2026</time>
+          </p>
         </div>
         <MapPreview />
       </section>
-      <div className="home-meta">
-        <span>Срез справочника</span>
-        <b>27 ноября 2026</b>
-      </div>
       <section className="home-flows">
         <div className="section-label">
-          <span className="eyebrow">Оформление</span>
           <h2>Путь от заявки до полиса</h2>
         </div>
         <div className="flow-index">
@@ -142,28 +116,42 @@ function Home() {
       </section>
       <section className="home-atlas">
         <div className="section-label">
-          <span className="eyebrow">Атлас интерфейсов</span>
           <h2>Два канала оформления</h2>
         </div>
         <div className="channel-tiles">
           {[
-            ["sfa", "SFA", "Рабочее место менеджера"],
-            ["nib", "НИБ", "Интернет-банк клиента"],
-          ].map(([k, t, d]) => (
+            [
+              "sfa",
+              "SFA",
+              "Рабочее место менеджера",
+              "./screens/sfa-6082-60020.webp",
+            ],
+            [
+              "nib",
+              "НИБ",
+              "Интернет-банк клиента",
+              "./screens/nib-8284-119994.webp",
+            ],
+          ].map(([k, t, d, preview]) => (
             <a href={"#/screens/" + k} key={k}>
-              <span>{t}</span>
-              <h3>{d}</h3>
-              <p>
-                Экранов с пройденным дизайн-чеком ·{" "}
-                {counts.filter((x) => x.channel === k).length}
-              </p>
+              <div className="channel-thumbnail">
+                <img src={preview} loading="lazy" decoding="async" alt="" />
+              </div>
+              <div className="channel-caption">
+                <span>{t}</span>
+                <h3>{d}</h3>
+                <p>
+                  Экранов с пройденным дизайн-чеком ·{" "}
+                  {counts.filter((x) => x.channel === k).length}
+                </p>
+                <ChevronRightMIcon aria-hidden="true" width={18} height={18} />
+              </div>
             </a>
           ))}
         </div>
       </section>
       <section className="home-product">
         <div>
-          <span className="eyebrow">Страховой продукт</span>
           <h2>Комплексная защита бизнеса</h2>
           <p>
             Имущество, ДМС и ответственность в одном полисе. Прототип, правила
@@ -181,30 +169,33 @@ function route() {
   return { parts: path.split("/"), query: new URLSearchParams(query), path };
 }
 function App() {
-  const [r, setR] = useState(route),
-    [menu, setMenu] = useState(false);
-  const search = useRef(null);
+  const [r, setR] = useState(route);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menu = useRef(null);
   const [key, a, b] = r.parts;
   useEffect(() => {
     const listen = () => {
       setR(route());
-      setMenu(false);
+      menu.current?.close();
       window.scrollTo(0, 0);
     };
     window.addEventListener("hashchange", listen);
     return () => window.removeEventListener("hashchange", listen);
   }, []);
   useEffect(() => {
-    const k = (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        search.current?.focus();
-      }
-      if (e.key === "Escape") setMenu(false);
+    if (!menuOpen) return;
+    const wide = window.matchMedia("(min-width: 851px)");
+    const closeWhenWide = () => {
+      if (wide.matches) menu.current?.close();
     };
-    window.addEventListener("keydown", k);
-    return () => window.removeEventListener("keydown", k);
-  }, []);
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    wide.addEventListener("change", closeWhenWide);
+    return () => {
+      wide.removeEventListener("change", closeWhenWide);
+      document.body.style.overflow = previous;
+    };
+  }, [menuOpen]);
   useEffect(() => {
     document.title =
       (document.querySelector("main h1")?.innerText.replace(/\s+/g, " ") ||
@@ -309,77 +300,66 @@ function App() {
           <strong>Альфа-Банк</strong>
         </a>
         <span className="top-name">Страховая платформа</span>
-        <form
-          className="top-search"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const q = search.current.value.trim();
-            location.hash = "/search?q=" + encodeURIComponent(q);
-            search.current.blur();
+        <HandbookSearch />
+        <button
+          type="button"
+          className="mobile-toggle"
+          aria-label="Меню"
+          aria-controls="section-menu"
+          aria-haspopup="dialog"
+          aria-expanded={menuOpen}
+          onClick={() => {
+            menu.current.showModal();
+            setMenuOpen(true);
           }}
         >
-          <button aria-label="Найти" type="submit">
-            <MagnifierMIcon />
-          </button>
-          <input
-            ref={search}
-            name="query"
-            type="search"
-            aria-label="Поиск по справочнику"
-            placeholder="Поиск по справочнику"
-          />
-          <kbd>⌘ K</kbd>
-        </form>
-        <button
-          className="mobile-toggle"
-          aria-controls="rail"
-          aria-expanded={menu}
-          onClick={() => setMenu(!menu)}
-        >
-          {menu ? "Закрыть" : "Меню"}
+          <ListMIcon aria-hidden="true" width={23} height={23} />
         </button>
       </header>
       <div className="layout">
-        <aside id="rail" className={"rail" + (menu ? " open" : "")}>
-          <nav aria-label="Основные разделы">
-            {nav.map(([title, items]) => (
-              <div key={title}>
-                <b>{title}</b>
-                {items.map(([path, t, Icon]) => {
-                  const active =
-                    r.path === path ||
-                    r.path.startsWith(path + "/") ||
-                    (key === "article" &&
-                      path ===
-                        { m: "architecture", s: "modules", p: "space" }[
-                          (a || "")[0]
-                        ]);
-                  return (
-                    <a
-                      key={path}
-                      href={"#/" + path}
-                      onClick={() => setMenu(false)}
-                      className={active ? "active" : ""}
-                      aria-current={active ? "page" : undefined}
-                    >
-                      <Icon aria-hidden="true" width={18} height={18} />
-                      <span>{t}</span>
-                    </a>
-                  );
-                })}
-              </div>
-            ))}
-          </nav>
-          <div className="rail-end">
-            <a href={github} target="_blank" rel="noreferrer">
-              Исходники на GitHub
-            </a>
-          </div>
+        <aside id="rail" className="rail">
+          <Navigation routePath={r.path} />
         </aside>
+        <dialog
+          id="section-menu"
+          className="section-menu"
+          ref={menu}
+          aria-labelledby="section-menu-title"
+          onClose={() => setMenuOpen(false)}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              const rect = e.currentTarget.getBoundingClientRect();
+              if (
+                e.clientX < rect.left ||
+                e.clientX > rect.right ||
+                e.clientY < rect.top ||
+                e.clientY > rect.bottom
+              )
+                e.currentTarget.close();
+            }
+          }}
+        >
+          <div className="sheet-content">
+            <div className="sheet-heading">
+              <h2 id="section-menu-title">Разделы справочника</h2>
+              <button
+                type="button"
+                aria-label="Закрыть меню"
+                onClick={() => menu.current.close()}
+              >
+                <CrossMIcon aria-hidden="true" width={19} height={19} />
+              </button>
+            </div>
+            <Navigation
+              routePath={r.path}
+              onNavigate={() => menu.current.close()}
+            />
+          </div>
+        </dialog>
         <main id="main" tabIndex="-1">
           <div className="crumb">
             <a href="#/home">Справочник</a>
-            <span>/</span>
+            <ChevronRightMIcon aria-hidden="true" width={13} height={13} />
             {label}
           </div>
           <div key={r.path}>{page}</div>
